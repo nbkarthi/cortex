@@ -1,0 +1,369 @@
+{
+  "company": "Nvidia",
+  "ticker": "NVDA",
+  "sector": "Semiconductors / AI Infrastructure",
+  "last_updated": "2026-04-21",
+  "transcripts": [
+    {
+      "quarter": "Q1 FY2025",
+      "fiscal_year": "FY2025",
+      "date": "2024-05-22",
+      "speakers": ["Jensen Huang (CEO)", "Colette Kress (CFO)"],
+      "financials": {
+        "revenue_bn": 44.1,
+        "eps_reported": 0.96,
+        "eps_estimate": 0.93,
+        "stock_reaction_pct": 4.29
+      },
+      "key_quotes": [
+        {
+          "speaker": "Jensen Huang",
+          "theme": "AI Platform Shift",
+          "text": "The next industrial revolution has begun. Companies and countries are partnering with NVIDIA to shift the trillion-dollar installed base of traditional data centers to accelerated computing and build a new type of data center — AI factories — to produce a new commodity: artificial intelligence."
+        },
+        {
+          "speaker": "Jensen Huang",
+          "theme": "AI Scale",
+          "text": "AI is growing faster and will be larger than any platform shifts before, including the Internet, mobile, and cloud."
+        },
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Sovereign AI",
+          "text": "Every nation now sees AI as core to the next industrial revolution. Countries are racing to build national AI platforms. We announced Taiwan's first AI factory in partnership with Foxconn. Japan, Korea, India, Canada, France, the UK, Germany, Italy, Spain, and more are now building national AI factories."
+        }
+      ],
+      "key_themes": [
+        "Blackwell production shipments Q2, ramp Q3, data center deployments Q4",
+        "Sovereign AI — new growth engine as nations build national AI platforms",
+        "AI described as bigger than Internet, mobile, cloud combined",
+        "Accelerated computing replacing general-purpose data centers globally",
+        "Revenue beat driven by hyperscaler demand for Hopper"
+      ],
+      "risks": [
+        "Blackwell ramp execution risk across multi-quarter timeline",
+        "Hyperscaler capex cycles — demand concentration risk"
+      ],
+      "tone": "Visionary and expansionist; 'industrial revolution' framing intensifies; sovereign AI narrative introduced"
+    },
+    {
+      "quarter": "Q2 FY2025",
+      "fiscal_year": "FY2025",
+      "date": "2024-08-28",
+      "speakers": ["Jensen Huang (CEO)", "Colette Kress (CFO)"],
+      "financials": {
+        "revenue_bn": 30.0,
+        "revenue_yoy_pct": 122,
+        "revenue_qoq_pct": 15,
+        "guidance_beat_bn": 2.0,
+        "data_center_revenue_bn": 26.3,
+        "data_center_yoy_pct": 154,
+        "data_center_qoq_pct": 16,
+        "q3_guidance_bn": 32.5
+      },
+      "key_quotes": [
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Blackwell Product Cycle",
+          "text": "Hopper demand remains strong, and the anticipation for Blackwell is incredible. Blackwell samples are shipping to our partners and customers. Blackwell is potentially the most successful product in Nvidia's history."
+        },
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Blackwell Performance",
+          "text": "The Blackwell architecture is expected to deliver 3 to 5 times more AI throughput in power-limited data centers compared to the Hopper architecture."
+        }
+      ],
+      "key_themes": [
+        "Data Center $26.3B — record, +154% YoY",
+        "Blackwell mask change complete; sampling functional systems to customers",
+        "Blackwell projected 'several billion dollars' revenue in Q4 FY2025",
+        "Hopper demand remains strong during Blackwell transition",
+        "Q3 guidance $32.5B; continues outpacing analyst estimates"
+      ],
+      "risks": [
+        "Blackwell architecture transition — margin pressure during ramp",
+        "Revenue concentration: Data Center is 88% of total revenue"
+      ],
+      "tone": "High confidence; 'most successful product in history' claim; transition narrative well-managed"
+    },
+    {
+      "quarter": "Q3 FY2025",
+      "fiscal_year": "FY2025",
+      "date": "2024-11-20",
+      "speakers": ["Jensen Huang (CEO)", "Colette Kress (CFO)"],
+      "financials": {
+        "revenue_bn": 35.1,
+        "revenue_yoy_pct": 94,
+        "revenue_qoq_pct": 17,
+        "eps_reported": 0.81,
+        "eps_estimate": 0.75,
+        "gaming_revenue_bn": 3.3,
+        "gaming_qoq_pct": 14,
+        "gaming_yoy_pct": 15
+      },
+      "key_quotes": [
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Networking Scale",
+          "text": "NVIDIA Spectrum-X leverages technology previously exclusive to InfiniBand to enable customers to achieve massive scale of their GPU compute, with xAI's Colossus supercomputer experiencing zero application latency degradation and maintaining 95% data throughput versus 60% for traditional Ethernet."
+        }
+      ],
+      "key_themes": [
+        "Blackwell architecture ramp beginning",
+        "Revenue beat guidance by ~$2.6B",
+        "xAI Colossus reference customer highlight",
+        "Gaming stable; holiday season tailwind",
+        "Spectrum-X networking gaining enterprise traction"
+      ],
+      "risks": [
+        "Supply chain constraints on Blackwell ramp",
+        "Gross margin pressure during architecture transition"
+      ],
+      "tone": "Confident; emphasis on unprecedented scale and product transition"
+    },
+    {
+      "quarter": "Q4 FY2025",
+      "fiscal_year": "FY2025",
+      "date": "2025-02-26",
+      "speakers": ["Jensen Huang (CEO)", "Colette Kress (CFO)"],
+      "financials": {
+        "revenue_bn": 39.3,
+        "eps_reported": 0.89,
+        "eps_estimate": 0.84,
+        "data_center_revenue_bn": 35.6,
+        "data_center_yoy_pct": 93,
+        "blackwell_revenue_bn": 11.0,
+        "cloud_pct_of_dc_revenue": 50,
+        "q1_fy2026_guidance_bn": 43.0,
+        "gross_margin_target": "mid-70s"
+      },
+      "key_quotes": [
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Blackwell Ramp",
+          "text": "Demand for Blackwell is amazing. We designed Blackwell for this moment — reasoning AI adds another scaling law. Increasing compute for training makes models smarter and increasing compute for long thinking makes the answer smarter."
+        },
+        {
+          "speaker": "Colette Kress",
+          "theme": "Product Ramp Speed",
+          "text": "Grace Blackwell delivered $11 billion of revenues last quarter — the fastest product ramp in our company's history. We have some 350 plants manufacturing the 1.5 million components that go into each one of the Blackwell racks."
+        }
+      ],
+      "key_themes": [
+        "Blackwell $11B revenue — fastest product ramp in Nvidia history",
+        "Data Center $35.6B, +93% YoY",
+        "Reasoning AI introduces new scaling law (inference-time compute)",
+        "Cloud providers ~50% of DC revenue",
+        "Q1 FY2026 guidance $43B — continued acceleration"
+      ],
+      "risks": [
+        "Gross margin expected to compress during Blackwell ramp before recovering to mid-70s",
+        "Supply chain complexity across 350 manufacturing plants"
+      ],
+      "tone": "Triumphant; Blackwell framed as generational leap; reasoning AI as new demand catalyst"
+    },
+    {
+      "quarter": "Q1 FY2026",
+      "fiscal_year": "FY2026",
+      "date": "2025-05-28",
+      "speakers": ["Jensen Huang (CEO)", "Colette Kress (CFO)"],
+      "financials": {
+        "revenue_bn": 44.0,
+        "revenue_yoy_pct": 69,
+        "data_center_revenue_bn": 39.0,
+        "data_center_yoy_pct": 73,
+        "eps_reported": 0.81,
+        "eps_estimate": 0.737,
+        "h20_charge_bn": 4.5,
+        "gross_margin_ex_charge_pct": 71.3,
+        "blackwell_pct_of_dc_compute": 70,
+        "q2_guidance_bn": 45.0
+      },
+      "key_quotes": [
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Supply Chain",
+          "text": "We have more orders than previously disclosed. We are increasing our supply chain and building it onshore in the United States, and plan to keep the supply chain busy for several more years."
+        },
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Global Demand",
+          "text": "Companies in Saudi Arabia, UAE, Oracle, and xAI are making large GPU cluster investments — demonstrating that AI infrastructure is becoming a global strategic imperative."
+        }
+      ],
+      "key_themes": [
+        "H20 export ban: $4.5B charge; $8B China revenue loss offset by strong non-China demand",
+        "Blackwell ~70% of data center compute revenue — ramp ahead of schedule",
+        "Hyperscalers deploying nearly 1,000 NVL72 racks/week",
+        "US onshore supply chain buildout underway",
+        "Q2 guidance $45B despite losing China H20 revenue"
+      ],
+      "risks": [
+        "US-China geopolitical risk — H20 export license required, ongoing uncertainty",
+        "Revenue concentration in hyperscalers and sovereign AI customers"
+      ],
+      "tone": "Resilient; China headwind framed as manageable; US supply chain buildout as long-term positive"
+    },
+    {
+      "quarter": "Q2 FY2026",
+      "fiscal_year": "FY2026",
+      "date": "2025-08-27",
+      "speakers": ["Jensen Huang (CEO)", "Colette Kress (CFO)"],
+      "financials": {
+        "revenue_bn": 46.7,
+        "revenue_yoy_pct": 56,
+        "revenue_qoq_pct": 6,
+        "gaap_gross_margin_pct": 72.4,
+        "non_gaap_gross_margin_pct": 72.7,
+        "gaap_eps": 1.08,
+        "non_gaap_eps": 1.05,
+        "h20_revenue_non_china_mn": 650,
+        "buyback_authorized_bn": 60.0,
+        "h1_shareholder_returns_bn": 24.3
+      },
+      "key_quotes": [
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Blackwell Ultra",
+          "text": "Blackwell is the AI platform the world has been waiting for, delivering an exceptional generational leap — production of Blackwell Ultra is ramping at full speed, and demand is extraordinary. NVIDIA NVLink rack-scale computing is revolutionary, arriving just in time as reasoning AI models drive orders-of-magnitude increases in training and inference performance."
+        }
+      ],
+      "key_themes": [
+        "Blackwell Ultra ramping; Blackwell DC revenue +17% sequentially",
+        "H20 geopolitical limbo: $650M to non-China; $2-5B potential if restrictions ease",
+        "$60B additional buyback authorized — shareholder return signal",
+        "Gross margins stabilizing at 72-73% range",
+        "NVLink rack-scale computing gaining traction for reasoning workloads"
+      ],
+      "risks": [
+        "H20: no China revenue included in Q3 outlook — binary geopolitical risk",
+        "Competitive networking market (Ethernet vs InfiniBand)"
+      ],
+      "tone": "Steady confidence; Blackwell Ultra launch as demand inflection; capital return signals financial maturity"
+    },
+    {
+      "quarter": "Q3 FY2026",
+      "fiscal_year": "FY2026",
+      "date": "2025-11-19",
+      "speakers": ["Jensen Huang (CEO)", "Colette Kress (CFO)"],
+      "financials": {
+        "revenue_bn": 57.0,
+        "revenue_yoy_pct": 62,
+        "revenue_qoq_pct": 22,
+        "data_center_revenue_bn": 51.0,
+        "data_center_yoy_pct": 66,
+        "gaap_gross_margin_pct": 73.4,
+        "non_gaap_gross_margin_pct": 73.6,
+        "inventory_qoq_pct": 32,
+        "supply_commitments_qoq_pct": 63,
+        "blackwell_500bn_forecast_on_track": true
+      },
+      "key_quotes": [
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Demand Signal",
+          "text": "Blackwell sales are off the charts, and cloud GPUs are sold out. Blackwell Ultra delivered 5x faster time to train than Hopper, and on DeepSeek-R1 delivered 10x higher performance per watt and 10x lower cost per token versus H200."
+        },
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Three Platform Shifts",
+          "text": "Three fundamental platform shifts — CPU to GPU acceleration, generative AI mainstreaming, and agentic AI emergence — are driving multi-year infrastructure investment cycles."
+        },
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Anthropic Partnership",
+          "text": "A strategic partnership with Anthropic is driving first-time adoption of Nvidia architecture, targeting one gigawatt of compute capacity."
+        },
+        {
+          "speaker": "Colette Kress",
+          "theme": "China Headwind",
+          "text": "Sizable purchase orders never materialized in the quarter due to geopolitical issues and the increasingly competitive market in China."
+        }
+      ],
+      "key_themes": [
+        "Revenue $57B — record; Data Center $51B (+66% YoY)",
+        "Blackwell Ultra 5x faster training, 10x cost per token vs H200",
+        "Agentic AI emergence cited as third platform shift",
+        "Anthropic partnership: 1 gigawatt compute target",
+        "China: order shortfall but $500B forecast for Blackwell+Rubin still on track",
+        "Supply commitments +63% QoQ — demand visibility building"
+      ],
+      "risks": [
+        "China geopolitical headwinds: missed orders in Q3",
+        "Competitive market in China as local alternatives gain ground"
+      ],
+      "tone": "Record-setting quarter; agentic AI introduced as next wave; China acknowledged but framed as contained"
+    },
+    {
+      "quarter": "Q4 FY2026",
+      "fiscal_year": "FY2026",
+      "date": "2026-02-25",
+      "speakers": ["Jensen Huang (CEO)", "Colette Kress (CFO)"],
+      "financials": {
+        "revenue_bn": 68.0,
+        "revenue_yoy_pct": 73,
+        "networking_yoy_pct_fy2026": 260,
+        "anthropic_investment_bn": 10.0
+      },
+      "key_quotes": [
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Agentic AI Inflection",
+          "text": "NVIDIA has seen the inflection of agentic AI and the usefulness of agents across enterprises everywhere, driving incredible compute demand. In the new world of AI, compute is revenues — without compute there's no way to generate tokens, and without tokens there's no way to grow revenues."
+        },
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Key Customer Deployments",
+          "text": "OpenAI launched GPT-5.2 Codex, trained with and inferencing on Grace Blackwell and NVL72 systems. Meta is deploying millions of Blackwells and Rubin GPUs, NVIDIA CPUs, and Spectrum-X Ethernet for training and inference."
+        },
+        {
+          "speaker": "Jensen Huang",
+          "theme": "Networking",
+          "text": "Through fiscal year 2026, NVIDIA's networking revenue accelerated on a year-over-year basis every single quarter, with 3.6x growth in Q4."
+        }
+      ],
+      "key_themes": [
+        "Revenue $68B — fiscal year record; networking revenue 3.6x YoY in Q4",
+        "Agentic AI framed as new demand driver beyond training and inference",
+        "'Compute is revenues' — new value framework for AI economy",
+        "OpenAI GPT-5.2 and Meta Llama on Blackwell at massive scale",
+        "$10B investment in Anthropic — deepening frontier model partnerships",
+        "Vera Rubin roadmap confirmed for H2 2026"
+      ],
+      "risks": [
+        "FY2027 tax rate guidance 7-19% range — uncertainty in tax environment",
+        "Concentration risk: top model makers (OpenAI, Meta, Anthropic) represent significant revenue"
+      ],
+      "tone": "Triumphant fiscal year close; agentic AI as next multi-year cycle; Rubin positioned as next Blackwell"
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-04-18",
+      "source": "Trefis / Yahoo Finance",
+      "headline": "NVIDIA Stock Surged 100% — Q4 FY2026 $68B revenue, +73% YoY; FY2027 EPS growth ~71% projected",
+      "snippet": "Q1 FY2027 revenue guided at $78B. Gross margins holding ~75%. $500B+ backlog for Blackwell and Vera Rubin through end of 2026.",
+      "tags": ["earnings", "guidance", "AI", "valuation"]
+    },
+    {
+      "date": "2026-04-17",
+      "source": "Seeking Alpha",
+      "headline": "Vera Rubin chip H2 2026 — cloud providers committing to early adoption",
+      "snippet": "Jensen Huang indicates Nvidia will generate 'at least' $1 trillion from AI chips through 2027. Vera Rubin seen as next architectural leap.",
+      "tags": ["product", "roadmap", "datacenter", "guidance"]
+    },
+    {
+      "date": "2026-04-08",
+      "source": "The Motley Fool",
+      "headline": "Nvidia stock hit by narrative shift not seen in 13 years",
+      "snippet": "Wall Street debate: is 2026 AI demand story already priced in? Valuation concerns emerge alongside order visibility.",
+      "tags": ["sentiment", "valuation", "narrative shift"]
+    },
+    {
+      "date": "2026-04-15",
+      "source": "Yahoo Finance",
+      "headline": "NVIDIA narrative shifting — AI capex sustainability questioned",
+      "snippet": "Sold off on concerns about whether hyperscaler capex cycle will remain elevated. 'Priced for perfection' debate intensifies.",
+      "tags": ["sentiment", "macro", "capex", "risk"]
+    }
+  ]
+}

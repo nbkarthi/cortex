@@ -1,0 +1,101 @@
+{
+  "dataset": "Cortex Seed Dataset — Earnings + News",
+  "version": "2.0",
+  "created": "2026-04-21",
+  "description": "Complete structured earnings transcript data and recent news for 3 companies across 2024–2026. Covers all available quarters from Q1 2024 through the most recent report. Designed to seed Cortex modules: earnings transcript analyzer, sentiment tracker, IC memo drafter, financial estimate tracker.",
+  "companies": [
+    {
+      "name": "Nvidia",
+      "ticker": "NVDA",
+      "file": "nvidia.json",
+      "fiscal_year_note": "Nvidia FY ends January. FY2025 = Feb 2024–Jan 2025; FY2026 = Feb 2025–Jan 2026.",
+      "transcripts": [
+        "Q1 FY2025 (May 2024)",
+        "Q2 FY2025 (Aug 2024)",
+        "Q3 FY2025 (Nov 2024)",
+        "Q4 FY2025 (Feb 2025)",
+        "Q1 FY2026 (May 2025)",
+        "Q2 FY2026 (Aug 2025)",
+        "Q3 FY2026 (Nov 2025)",
+        "Q4 FY2026 (Feb 2026)"
+      ],
+      "transcript_count": 8,
+      "news_items": 4,
+      "next_earnings": "Q1 FY2027 — ~May 2026",
+      "primary_themes": [
+        "Blackwell product cycle (launch → ramp → dominance)",
+        "Reasoning AI as new scaling law",
+        "Sovereign AI — national AI factory buildout",
+        "China export controls and geopolitical risk",
+        "Agentic AI as next demand driver",
+        "Vera Rubin H2 2026 roadmap"
+      ]
+    },
+    {
+      "name": "Tesla",
+      "ticker": "TSLA",
+      "file": "tesla.json",
+      "fiscal_year_note": "Tesla uses calendar year.",
+      "transcripts": [
+        "Q1 2024 (Apr 2024)",
+        "Q2 2024 (Jul 2024)",
+        "Q3 2024 (Oct 2024)",
+        "Q4 2024 (Jan 2025)",
+        "Q1 2025 (Apr 2025)",
+        "Q2 2025 (Jul 2025)",
+        "Q3 2025 (Oct 2025)",
+        "Q4 2025 (Jan 2026)"
+      ],
+      "transcript_count": 8,
+      "news_items": 4,
+      "next_earnings": "Q1 2026 — April 22, 2026",
+      "primary_themes": [
+        "Autonomy: FSD ramp (supervised → unsupervised)",
+        "Robotaxi: Austin launch, multi-city expansion",
+        "Optimus: lab → factory → commercial production arc",
+        "Energy business: structural growth outpacing auto",
+        "AI5 chip and TeraFab compute independence",
+        "Auto margin recovery vs delivery headwinds"
+      ]
+    },
+    {
+      "name": "Amazon",
+      "ticker": "AMZN",
+      "file": "amazon.json",
+      "fiscal_year_note": "Amazon uses calendar year.",
+      "transcripts": [
+        "Q1 2024 (Apr 2024)",
+        "Q2 2024 (Aug 2024)",
+        "Q3 2024 (Oct 2024)",
+        "Q4 2024 (Feb 2025)",
+        "Q1 2025 (May 2025)",
+        "Q2 2025 (Aug 2025)",
+        "Q3 2025 (Oct 2025)",
+        "Q4 2025 (Feb 2026)"
+      ],
+      "transcript_count": 8,
+      "news_items": 4,
+      "next_earnings": "Q1 2026 — April 29, 2026",
+      "primary_themes": [
+        "AWS re-acceleration and AI revenue tripling",
+        "Trainium custom silicon vs Nvidia GPU dependency",
+        "Anthropic investment and frontier model strategy",
+        "Amazon LEO / Globalstar satellite network",
+        "Grocery: $150B gross sales, Whole Foods expansion",
+        "Capex supercycle: $89.9B in 2025, increasing in 2026"
+      ]
+    }
+  ],
+  "schema_notes": {
+    "transcripts": "Each entry includes: quarter, date, speakers, financials (key metrics as numbers), key_quotes (speaker + theme + text), key_themes (array of strings), risks (array), tone (descriptive string)",
+    "news": "Each item includes: date, source, headline, snippet, tags (array)",
+    "intended_modules": [
+      "earnings_transcript_analyzer",
+      "sentiment_narrative_tracker",
+      "ic_memo_drafter",
+      "financial_estimate_tracker",
+      "private_company_diligence_assistant"
+    ],
+    "coverage_gap": "Q1 2026 for all three companies not yet reported as of 2026-04-21. Tesla reports 2026-04-22; Amazon reports 2026-04-29; Nvidia ~May 2026."
+  }
+}

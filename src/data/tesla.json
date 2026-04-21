@@ -1,0 +1,389 @@
+{
+  "company": "Tesla",
+  "ticker": "TSLA",
+  "sector": "Electric Vehicles / Autonomous Driving / Energy / Robotics",
+  "last_updated": "2026-04-21",
+  "transcripts": [
+    {
+      "quarter": "Q1 2024",
+      "date": "2024-04-23",
+      "speakers": ["Elon Musk (CEO)", "Vaibhav Taneja (CFO)"],
+      "financials": {
+        "eps_reported": 0.62,
+        "revenue_missed": true,
+        "cybertruck_weekly_production": 1000,
+        "fsd_cumulative_miles_bn": 0.3,
+        "fsd_subscription_price_usd": 99,
+        "megapack_q1": "all-time high deployment record"
+      },
+      "key_quotes": [
+        {
+          "speaker": "Elon Musk",
+          "theme": "EV Market Challenges",
+          "text": "EV adoption rate globally is under pressure. A lot of other manufacturers are pulling back on EVs and pursuing plug-in hybrids instead — though we believe electric vehicles will ultimately dominate the market."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Energy Business",
+          "text": "Energy storage deployments of Megapack reached an all-time high in Q1, leading to record profitability for the energy business. Growth is expected to continue significantly faster than the car business."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Optimus Early Stage",
+          "text": "Optimus robots are currently performing simple tasks in the lab and are expected to be doing useful tasks in Tesla factories by the end of the year, with mass production and external sales anticipated by the end of next year."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Cybercab Reveal",
+          "text": "Tesla plans to showcase its purpose-built robotaxi, the Cybercab, in August."
+        }
+      ],
+      "key_themes": [
+        "EV industry hangover — competitors retreating to hybrids",
+        "Energy business outpacing auto in growth rate",
+        "FSD V12 (vision-only, end-to-end neural net) proven approach",
+        "Optimus lab-stage; factory deployment target end of 2024",
+        "Cybercab robotaxi reveal planned August 2024",
+        "Cybertruck ramping: 1,000 units/week"
+      ],
+      "risks": [
+        "Auto revenue miss — pricing pressure and market demand softness",
+        "Giga Mexico paused pending tariff clarity",
+        "FSD regulatory approval timeline uncertain"
+      ],
+      "tone": "Defensive on auto; bullish on energy and AI long-term; Optimus and robotaxi framing as future revenue pillars"
+    },
+    {
+      "quarter": "Q2 2024",
+      "date": "2024-07-23",
+      "speakers": ["Elon Musk (CEO)", "Vaibhav Taneja (CFO)"],
+      "financials": {
+        "eps_reported": 0.42,
+        "revenue_bn": 25.5,
+        "revenue_beat": true,
+        "operating_cash_flow_bn": 3.6,
+        "free_cash_flow_bn": 1.3,
+        "capex_2024_guidance_bn": 10.0,
+        "gpu_cluster_target": "50k GPUs",
+        "cells_4680_qoq_pct": 51
+      },
+      "key_quotes": [
+        {
+          "speaker": "Elon Musk",
+          "theme": "AI Infrastructure",
+          "text": "Tesla expects the year to be over $10 billion in capex as we increase spending to bring a 50k GPU cluster online, which will immensely increase our capabilities to scale FSD and other AI initiatives."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Market Competition",
+          "text": "Tesla saw large adoption exploration in EVs, and then experienced a hangover as competing electric vehicles entered the market — most not performing well but discounting substantially, making it more difficult for Tesla."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Autonomy Timeline",
+          "text": "Tesla should achieve unsupervised full self-driving possibly by the end of this year, with next year seeming highly probable."
+        }
+      ],
+      "key_themes": [
+        "Revenue $25.5B — beat despite EV market challenges",
+        "$10B+ capex for AI: 50K GPU cluster to scale FSD",
+        "4680 battery cells +51% QoQ — cost reduction on track",
+        "Robotaxi unveil postponed (from August) to make product changes",
+        "Giga Mexico paused due to tariff uncertainty",
+        "FSD unsupervised target: end of 2024 (possible) or 2025 (probable)"
+      ],
+      "risks": [
+        "Robotaxi timeline slipping — execution credibility at risk",
+        "Competitive EV pricing war compressing margins",
+        "Giga Mexico pause — international capacity constrained"
+      ],
+      "tone": "Pragmatic; acknowledges market competition; confident on AI/autonomy roadmap; timeline revision on robotaxi noted"
+    },
+    {
+      "quarter": "Q3 2024",
+      "date": "2024-10-23",
+      "speakers": ["Elon Musk (CEO)", "Vaibhav Taneja (CFO)"],
+      "financials": {
+        "revenue_bn": 25.18,
+        "eps_reported": 0.62,
+        "operating_cash_flow_bn": 6.3,
+        "cumulative_vehicles_produced_mn": 7,
+        "energy_storage_megapack_run_rate_gwh": 40,
+        "fsd_cumulative_miles_bn": 2.0,
+        "fsd_v12_adoption_pct": 50
+      },
+      "key_quotes": [
+        {
+          "speaker": "Elon Musk",
+          "theme": "Energy Business",
+          "text": "The energy storage business is growing like wildfire with strong demand for both Megapack and Powerwall. The Lathrop Megapack factory is reaching a 40 gigawatt-hour annual run rate."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Affordable Models",
+          "text": "Tesla plans to introduce more affordable models in the first half of 2025, aiming at 20% to 30% vehicle sales growth, with the Cybercab projected to reach volume production in 2026 with at least 2 million units annually."
+        }
+      ],
+      "key_themes": [
+        "Record Q3 operating cash flow $6.3B",
+        "7 millionth vehicle produced",
+        "Energy segment 'growing like wildfire' — Megapack 40 GWh run rate",
+        "FSD V12 past 2B cumulative miles; >50% adoption rate",
+        "Affordable vehicles H1 2025; Cybercab volume production 2026",
+        "EPS met estimates; revenue beat consensus"
+      ],
+      "risks": [
+        "Auto margin pressure in challenging pricing environment",
+        "Cybercab production timeline execution risk",
+        "FSD regulatory approval pathway uncertainty"
+      ],
+      "tone": "Cautiously optimistic; concrete milestones cited; energy business framed as underappreciated by market"
+    },
+    {
+      "quarter": "Q4 2024",
+      "date": "2025-01-29",
+      "speakers": ["Elon Musk (CEO)", "Vaibhav Taneja (CFO)"],
+      "financials": {
+        "deliveries_annualized_mn": 2.0,
+        "model_y_global_rank": "best-selling vehicle of any kind globally in 2024",
+        "autopilot_safety_miles_per_crash_mn": 5.9,
+        "baseline_safety_miles_per_crash_mn": 0.7
+      },
+      "key_quotes": [
+        {
+          "speaker": "Elon Musk",
+          "theme": "Autonomy Priority",
+          "text": "Doubling down on autonomy — but really it's like autonomy is 10x-ing. Doubling is not even enough."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Strategic Investments",
+          "text": "Tesla made many critical investments in 2024 in manufacturing, AI and robotics that will bear immense fruit in the future — to such a scale that it is difficult to comprehend."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Optimus Robotics",
+          "text": "Optimus units in use at Tesla factories will inform production design. Our goal is to ramp up Optimus production faster than perhaps anything has ever been ramped."
+        }
+      ],
+      "key_themes": [
+        "Record deliveries — Model Y best-selling vehicle on Earth globally in 2024",
+        "Autonomy investments dramatically accelerating ('10x-ing')",
+        "Optimus robot production ramp underway in Tesla factories",
+        "Safety: 5.9M miles/crash on Autopilot vs 0.7M baseline (8.4x safer)"
+      ],
+      "risks": [
+        "High capex on AI and robotics with long payback horizons",
+        "Elon Musk's political activities (DOGE role) cited as distraction risk by analysts"
+      ],
+      "tone": "Visionary; expansive claims on autonomy and robotics; 'difficult to comprehend' scale language"
+    },
+    {
+      "quarter": "Q1 2025",
+      "date": "2025-04-22",
+      "speakers": ["Elon Musk (CEO)", "Vaibhav Taneja (CFO)"],
+      "financials": {
+        "eps_reported": 0.27,
+        "eps_estimate": 0.42,
+        "revenue_bn": 19.34,
+        "revenue_estimate_bn": 21.4,
+        "stock_reaction_pct": 9.94,
+        "energy_storage_gross_profit": "record"
+      },
+      "key_quotes": [
+        {
+          "speaker": "Elon Musk",
+          "theme": "Model Y Factory Transition",
+          "text": "Updating all factories for the bestselling car in the world all at the same time — something that hasn't been undertaken in the automotive industry before. In less than eight weeks, we reached the production rate of the previous Model Y in all factories."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Robotaxi Launch",
+          "text": "Tesla is on track to launch fully autonomous rides in Austin by June, with plans to expand to other cities by the end of the year. We are targeting millions of autonomous vehicles by the second half of 2025."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Optimus Scale Target",
+          "text": "Tesla aims to produce 1 million Optimus units annually by 2029."
+        }
+      ],
+      "key_themes": [
+        "EPS and revenue missed — worst quarter vs estimates; stock still rallied 9.94% post-call",
+        "Model Y: unprecedented simultaneous global factory retooling completed in 8 weeks",
+        "Energy: record gross profit — 'stationary energy storage to ultimately scale to terawatts/year'",
+        "Robotaxi Austin launch: June 2025 target",
+        "Best-selling car in California in Q1 despite headwinds",
+        "Record test drives globally in Q1"
+      ],
+      "risks": [
+        "Revenue miss signals demand weakness or transition-related supply disruption",
+        "Autonomous vehicle regulatory risk in Austin and other cities",
+        "Optimus 2029 volume target has wide uncertainty range"
+      ],
+      "tone": "Optimistic despite misses; management framing misses as transition-related, not structural; autonomy narrative offsets auto weakness"
+    },
+    {
+      "quarter": "Q2 2025",
+      "date": "2025-07-23",
+      "speakers": ["Elon Musk (CEO)", "Vaibhav Taneja (CFO)"],
+      "financials": {
+        "eps_reported": 0.40,
+        "eps_estimate": 0.397,
+        "revenue_beat": true,
+        "fsd_safety_vs_non_fsd": "10x safer"
+      },
+      "key_quotes": [
+        {
+          "speaker": "Elon Musk",
+          "theme": "Robotaxi Launch",
+          "text": "Tesla successfully launched a robotaxi, providing its first drives with no one in the driver's seat with paying customers in Austin. We are expecting to greatly increase the service area — with regulatory permission to launch in the Bay Area, Nevada, Arizona, Florida, and other places."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Optimus 3",
+          "text": "The Optimus 3 design is the final correct design with no fundamental changes needed. Prototypes will be available in about three months, with production starting at the beginning of next year."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "FSD Autonomy",
+          "text": "Every Tesla manufactured in the US and Europe autonomously drives itself from the end of the line to the loading docks."
+        }
+      ],
+      "key_themes": [
+        "Robotaxi officially launched in Austin — paying customers, no safety driver",
+        "Multi-state robotaxi expansion: Bay Area, Nevada, Arizona, Florida and more",
+        "Optimus 3 design final; production H1 2026",
+        "Dojo 2 at scale 'sometime next year' — 100K H100 equivalent",
+        "Service and other margins improving sequentially",
+        "FSD: cars on FSD '10x statistically safer'"
+      ],
+      "risks": [
+        "Robotaxi regulatory pathway in each new state creates friction",
+        "Optimus 3 production timeline dependent on supply chain ramp",
+        "Dojo 2 capability vs competitor training clusters uncertain"
+      ],
+      "tone": "Milestone-driven; robotaxi launch tangible proof point; Optimus design confidence high; 'nation-scale expansion' language"
+    },
+    {
+      "quarter": "Q3 2025",
+      "date": "2025-10-22",
+      "speakers": ["Elon Musk (CEO)", "Vaibhav Taneja (CFO)"],
+      "financials": {
+        "eps_reported": 0.50,
+        "eps_estimate": 0.52,
+        "revenue_bn": 28.095,
+        "revenue_estimate_bn": 26.27,
+        "free_cash_flow_bn": 4.0,
+        "cash_and_investments_bn": 41.0,
+        "auto_gross_margin_pct": 15.4,
+        "tariff_impact_bn": 0.4,
+        "china_apac_qoq_pct": 33,
+        "north_america_qoq_pct": 28,
+        "emea_qoq_pct": 25
+      },
+      "key_quotes": [
+        {
+          "speaker": "Elon Musk",
+          "theme": "Autonomous Confidence",
+          "text": "I am essentially 100% confident that we can solve unsupervised full self-driving at a safety level much greater than human."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "AI Leadership",
+          "text": "Tesla is at a critical inflection point as it brings AI into the real world. Tesla really is the leader in real-world AI."
+        }
+      ],
+      "key_themes": [
+        "Record Q3: $4B FCF, $41B+ cash — financial fortress",
+        "Auto revenue grew 29% sequentially; margin 15.4%",
+        "Global demand recovery: China/APAC +33%, NA +28%, EMEA +25% QoQ",
+        "FSD: safety drivers to be removed in multiple metro areas shortly",
+        "Tariff impact $400M+ across auto and energy segments",
+        "'100% confident' on unsupervised FSD — strongest autonomy claim yet"
+      ],
+      "risks": [
+        "Tariff headwinds: $400M+ impact; ongoing trade policy uncertainty",
+        "EPS miss ($0.50 vs $0.52 estimate) despite strong revenue beat"
+      ],
+      "tone": "Record results underpin confidence; '100% confident' on FSD is strongest-ever autonomy claim; tariffs as headwind acknowledged"
+    },
+    {
+      "quarter": "Q4 2025",
+      "date": "2026-01-28",
+      "speakers": ["Elon Musk (CEO)", "Vaibhav Taneja (CFO)"],
+      "financials": {
+        "eps_reported": 0.50,
+        "eps_estimate": 0.45,
+        "revenue_bn": 24.901,
+        "revenue_estimate_bn": 24.79,
+        "total_gross_margin_pct": 20.1,
+        "auto_gross_margin_ex_credits_pct": 17.9,
+        "energy_revenue_bn": 12.8,
+        "energy_revenue_yoy_pct": 26.6,
+        "capex_2026_guidance_bn": 20.0,
+        "new_factories_planned": 6
+      },
+      "key_quotes": [
+        {
+          "speaker": "Elon Musk",
+          "theme": "AI5 Chip",
+          "text": "Completing the AI5 chip design is critical for Tesla's future, with a focus on ensuring enough chips for vehicle and Optimus production. Plans for a Tesla TeraFab to address potential supply constraints."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "2026 Outlook",
+          "text": "Cybercab, Tesla Semi and Megapack 3 are on schedule for volume production starting in 2026. First generation production lines for Optimus are being installed in anticipation of volume production."
+        },
+        {
+          "speaker": "Elon Musk",
+          "theme": "Energy Record",
+          "text": "Record gross profit for the quarter and the year — nearly $12.8 billion in revenue at 26.6% year-over-year growth, with record deliveries in Malaysia, Norway, Poland, Saudi Arabia, and Taiwan."
+        }
+      ],
+      "key_themes": [
+        "Total gross margin 20.1% — highest in 2 years; auto margin ex-credits 17.9%",
+        "Energy: $12.8B annual revenue, +26.6% YoY — structural growth story confirmed",
+        "Cybercab, Semi, Megapack 3 all on schedule for 2026 volume production",
+        "Optimus production lines being installed",
+        "AI5 chip development — critical milestone; TeraFab concept announced",
+        "$20B+ capex 2026 across 6 new factories and AI infrastructure"
+      ],
+      "risks": [
+        "16% delivery decline — auto demand headwinds persist despite margin recovery",
+        "AI5 chip dependency — key bottleneck for vehicle and Optimus production",
+        "$20B capex commitment in uncertain macro environment"
+      ],
+      "tone": "Cautiously triumphant; margin recovery is the story; energy and AI infrastructure as long-term conviction drivers; 2026 positioned as product launch year"
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-04-02",
+      "source": "CNBC",
+      "headline": "Tesla Q1 2026: 408,386 produced, 358,023 delivered, 8.8 GWh energy deployed",
+      "snippet": "Deliveries fell 14% from last quarter but showed modest growth YoY. Energy storage at record 8.8 GWh.",
+      "tags": ["deliveries", "production", "energy"]
+    },
+    {
+      "date": "2026-04-15",
+      "source": "CNBC",
+      "headline": "Tesla stock +8% after Musk touts AI5 chip engineering milestone",
+      "snippet": "CEO Elon Musk announced AI5 chip has reached a key engineering milestone and is nearing production readiness.",
+      "tags": ["chip", "AI", "product"]
+    },
+    {
+      "date": "2026-04-20",
+      "source": "The Motley Fool",
+      "headline": "Tesla gets good news from Musk on trillion-dollar robotaxi market",
+      "snippet": "Tesla plans to expand robotaxi to Las Vegas, Miami, Orlando, Phoenix, and Tampa in H1 2026.",
+      "tags": ["robotaxi", "autonomy", "expansion"]
+    },
+    {
+      "date": "2026-04-21",
+      "source": "Meyka / GuruFocus",
+      "headline": "Tesla Q1 2026 earnings April 22 — analysts forecast $0.36 EPS, $22.26B revenue",
+      "snippet": "Stock down 12.7% YTD. Energy division expected to outperform auto segment. $20B capex investment in assembly lines and robotics announced.",
+      "tags": ["earnings preview", "guidance", "capex"]
+    }
+  ]
+}

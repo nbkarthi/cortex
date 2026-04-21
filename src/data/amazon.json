@@ -1,0 +1,375 @@
+{
+  "company": "Amazon",
+  "ticker": "AMZN",
+  "sector": "E-Commerce / Cloud (AWS) / AI / Logistics / Satellite",
+  "last_updated": "2026-04-21",
+  "transcripts": [
+    {
+      "quarter": "Q1 2024",
+      "date": "2024-04-30",
+      "speakers": ["Andy Jassy (CEO)", "Brian Olsavsky (CFO)"],
+      "financials": {
+        "revenue_bn": 143.3,
+        "revenue_yoy_pct": 13,
+        "operating_income_bn": 15.3,
+        "operating_income_yoy_pct": 221,
+        "fcf_ttm_adj_bn": 48.8,
+        "aws_revenue_yoy_pct": 17.2,
+        "aws_annualized_run_rate_bn": 100,
+        "advertising_yoy_pct": 24
+      },
+      "key_quotes": [
+        {
+          "speaker": "Andy Jassy",
+          "theme": "AWS AI Momentum",
+          "text": "AWS is seeing strong demand, particularly in generative AI, with significant investments in training models. Companies have completed the significant majority of cost optimization efforts and are focused again on new efforts — modernizing infrastructure and moving from on-premises to the cloud."
+        },
+        {
+          "speaker": "Andy Jassy",
+          "theme": "Operating Leverage",
+          "text": "Operating income was $15.3 billion, up 221% year over year — a signal that the cost structure improvements we made are now flowing through to profitability at scale."
+        }
+      ],
+      "key_themes": [
+        "Operating income +221% YoY — cost discipline paying off",
+        "AWS $100B annualized run rate — crossed milestone; +17.2% growth accelerating",
+        "AI-driven innovation replacing cost-optimization mode for enterprise customers",
+        "Advertising +24% YoY — high-margin business growing rapidly",
+        "Prime Video ads launched; early days but advertisers excited about measurability",
+        "Grocery (Whole Foods, Amazon Fresh) gaining traction in nonperishables"
+      ],
+      "risks": [
+        "Capex expected to increase significantly in 2024 — investor concern on ROI timeline",
+        "FX headwinds affecting international segments"
+      ],
+      "tone": "Confident and disciplined; profitability recovery narrative front and center; AI and advertising as next growth vectors"
+    },
+    {
+      "quarter": "Q2 2024",
+      "date": "2024-08-01",
+      "speakers": ["Andy Jassy (CEO)", "Brian Olsavsky (CFO)"],
+      "financials": {
+        "revenue_bn": 148.0,
+        "revenue_yoy_pct": 11,
+        "operating_income_bn": 14.7,
+        "operating_income_yoy_pct": 91,
+        "fcf_ttm_adj_bn": 51.4,
+        "fcf_ttm_adj_yoy_pct": 664,
+        "aws_revenue_yoy_pct": 18.8,
+        "capex_h1_bn": 30.5
+      },
+      "key_quotes": [
+        {
+          "speaker": "Andy Jassy",
+          "theme": "AWS Acceleration",
+          "text": "AWS year-over-year revenue growth accelerated again from 17.2% in Q1 to 18.8% in Q2. Companies have completed the significant majority of their cost optimization efforts and are focused again on innovation and infrastructure modernization."
+        },
+        {
+          "speaker": "Andy Jassy",
+          "theme": "AI Model Access",
+          "text": "Amazon announced availability of Anthropic Claude 3.5 Sonnet, Meta Llama 3.1, and Mistral's Large 2 models in Amazon Bedrock — expanding the frontier model marketplace for customers."
+        },
+        {
+          "speaker": "Andy Jassy",
+          "theme": "Capex Signal",
+          "text": "Capital investments are expected to be higher in H2 2024, with the majority of spend to support the growing need for AWS infrastructure — both generative AI and non-generative AI workloads."
+        }
+      ],
+      "key_themes": [
+        "AWS growth accelerating: 17.2% → 18.8% — re-acceleration story beginning",
+        "FCF +664% YoY — $51.4B TTM; operating leverage exceptional",
+        "Capex H1: $30.5B; H2 to be higher — committed AI infrastructure buildout",
+        "Bedrock: Claude 3.5 Sonnet, Llama 3.1, Mistral Large 2 — frontier model hub",
+        "Prime Day record: most items purchased ever; advertising growth 24%"
+      ],
+      "risks": [
+        "H2 capex increase ahead of revenue — timing mismatch risk",
+        "AI accelerators more expensive than CPUs — margin pressure in AWS buildout"
+      ],
+      "tone": "Accelerating into AI investment; re-acceleration of AWS as central narrative; FCF generation provides cover for capex"
+    },
+    {
+      "quarter": "Q3 2024",
+      "date": "2024-10-31",
+      "speakers": ["Andy Jassy (CEO)", "Brian Olsavsky (CFO)"],
+      "financials": {
+        "worldwide_unit_growth_pct": 12,
+        "ai_revenue_growth_yoy_pct": "triple-digit",
+        "ai_revenue_vs_early_aws": "3x faster growth trajectory"
+      },
+      "key_quotes": [
+        {
+          "speaker": "Andy Jassy",
+          "theme": "AI Trajectory",
+          "text": "Amazon's AI business is a multi-billion dollar business growing triple-digit percentages year-over-year and growing three times faster at its stage of evolution than AWS did itself."
+        },
+        {
+          "speaker": "Andy Jassy",
+          "theme": "AI Products",
+          "text": "Rufus, a generative AI expert shopping assistant, is now available in Canada, France, Germany, India, Italy, Spain, and the UK."
+        }
+      ],
+      "key_themes": [
+        "AI business growing 3x faster than early AWS did",
+        "Triple-digit YoY AI revenue growth",
+        "Prime membership and unit volume strong (+12%)",
+        "Rufus AI shopping assistant global rollout",
+        "Project Amelia seller AI assistant launched",
+        "AWS infrastructure capex accelerating to meet AI demand"
+      ],
+      "risks": [
+        "AI accelerator chips more expensive than CPUs — capex intensity rising",
+        "Cash conversion cycle lengthens as AWS data center buildout accelerates"
+      ],
+      "tone": "Bullish on AI; using AWS origin story as benchmark to frame AI opportunity scale"
+    },
+    {
+      "quarter": "Q4 2024",
+      "date": "2025-02-06",
+      "speakers": ["Andy Jassy (CEO)", "Brian Olsavsky (CFO)"],
+      "financials": {
+        "revenue_bn": 187.8,
+        "revenue_yoy_pct": 10,
+        "operating_income_bn": 21.2,
+        "operating_income_yoy_pct": 61,
+        "fcf_ttm_adj_bn": 36.2,
+        "fx_headwind_bn": 0.7
+      },
+      "key_quotes": [
+        {
+          "speaker": "Andy Jassy",
+          "theme": "AI Capex Conviction",
+          "text": "The vast majority of that capex spend is on AI for AWS. When AWS is expanding its capex, particularly in what we think is one of these once-in-a-lifetime type of business opportunities like AI represents, I think it's actually quite a good sign, medium to long term, for the AWS business."
+        },
+        {
+          "speaker": "Andy Jassy",
+          "theme": "DeepSeek",
+          "text": "I think like many others, we were impressed with what DeepSeek has done. We also thought some of the inference optimizations they did were also quite interesting."
+        }
+      ],
+      "key_themes": [
+        "Operating income +61% YoY; margin expansion story intact",
+        "AI described as 'once-in-a-lifetime opportunity'",
+        "$700M FX headwind masked top-line beat",
+        "DeepSeek acknowledged as impressive — inference optimization angle",
+        "Majority of capex now directed to AI for AWS"
+      ],
+      "risks": [
+        "FX headwinds in international business",
+        "Massive AI capex with uncertain near-term ROI timeline",
+        "Open-source inference efficiency (DeepSeek) could commoditize model costs"
+      ],
+      "tone": "Measured confidence; 'once-in-a-lifetime' framing signals long-term conviction; balanced DeepSeek acknowledgment"
+    },
+    {
+      "quarter": "Q1 2025",
+      "date": "2025-05-01",
+      "speakers": ["Andy Jassy (CEO)", "Brian Olsavsky (CFO)"],
+      "financials": {
+        "revenue_bn": 155.7,
+        "revenue_yoy_pct": 9,
+        "aws_revenue_bn": 29.3,
+        "aws_yoy_pct": 17,
+        "aws_backlog_bn": 189
+      },
+      "key_quotes": [
+        {
+          "speaker": "Andy Jassy",
+          "theme": "AWS TAM Expansion",
+          "text": "Before this generation of AI, we thought AWS had the chance to ultimately be a multi-hundred billion dollar revenue run rate business. We now think it could be even larger."
+        },
+        {
+          "speaker": "Andy Jassy",
+          "theme": "Alexa+ Launch",
+          "text": "Amazon introduced Alexa+, our next-generation Alexa — meaningfully smarter and more capable than her prior self. She can both answer virtually any question and take actions, and is free with Prime."
+        },
+        {
+          "speaker": "Andy Jassy",
+          "theme": "Project Kuiper",
+          "text": "Amazon began full-scale deployment of Project Kuiper's satellite internet network with launch and activation of first satellites."
+        }
+      ],
+      "key_themes": [
+        "AWS TAM raised: 'could be even larger' than multi-hundred billion estimate",
+        "AWS $29.3B (+17% YoY); backlog $189B (+20% YoY)",
+        "Alexa+ launched — agentic assistant, free with Prime",
+        "Project Kuiper: first commercial satellite deployment underway",
+        "P5 (Nvidia GPU) instances and Trainium 2 scaling simultaneously"
+      ],
+      "risks": [
+        "Revenue growth decelerated to 9% YoY — below prior quarters",
+        "Satellite deployment capex: Kuiper is a multi-year, capital-intensive bet"
+      ],
+      "tone": "Confident; raises AWS long-term TAM; Kuiper and Alexa+ as emerging optionality"
+    },
+    {
+      "quarter": "Q2 2025",
+      "date": "2025-07-31",
+      "speakers": ["Andy Jassy (CEO)", "Brian Olsavsky (CFO)"],
+      "financials": {
+        "revenue_bn": 167.7,
+        "revenue_yoy_pct": 12,
+        "operating_income_bn": 19.2,
+        "operating_income_yoy_pct": 31,
+        "aws_run_rate_bn": 123,
+        "aws_yoy_pct": 17.5,
+        "advertising_yoy_pct": 22,
+        "q3_guidance_low_bn": 174,
+        "q3_guidance_high_bn": 179.5
+      },
+      "key_quotes": [
+        {
+          "speaker": "Andy Jassy",
+          "theme": "AI Conviction",
+          "text": "AI is the biggest technology transformation of our lifetime. We have more demand than we have capacity right now."
+        },
+        {
+          "speaker": "Andy Jassy",
+          "theme": "AI Products",
+          "text": "Amazon expanded Alexa+ to millions of customers, launched AI models like DeepFleet that optimize productivity paths for robots, made it easier for software developers to write code with Kiro, launched Strands to make it easier to build AI agents, and released Bedrock AgentCore."
+        }
+      ],
+      "key_themes": [
+        "Revenue $167.7B (+12%); operating income $19.2B (+31%)",
+        "AWS $123B run rate (+17.5%) — demand exceeding capacity",
+        "'Biggest technology transformation of our lifetime' — strongest AI conviction statement yet",
+        "Advertising $17.7B+ (+22%) — 3 consecutive accelerating quarters",
+        "New enterprise AI signings: PepsiCo, Airbnb, Nasdaq, SAP, Warner Bros Discovery",
+        "Q3 guidance $174-179.5B — continued acceleration"
+      ],
+      "risks": [
+        "Demand exceeding capacity — risk of customer churn to competitors while capacity catches up",
+        "Operating income +31% — growth slowing vs prior year pace"
+      ],
+      "tone": "Peak conviction on AI; demand constrained by supply — framed as positive; enterprise customer wins as proof points"
+    },
+    {
+      "quarter": "Q3 2025",
+      "date": "2025-10-30",
+      "speakers": ["Andy Jassy (CEO)", "Brian Olsavsky (CFO)"],
+      "financials": {
+        "revenue_bn": 180.2,
+        "revenue_yoy_pct": 12,
+        "eps_reported": 1.95,
+        "eps_estimate": 1.56,
+        "aws_revenue_bn": 33.0,
+        "aws_run_rate_bn": 132,
+        "aws_backlog_bn": 200,
+        "capex_ytd_bn": 89.9,
+        "capex_full_year_estimate_bn": 125,
+        "operating_income_reported_bn": 17.4,
+        "operating_income_adjusted_bn": 21.7,
+        "ftc_settlement_bn": 2.5,
+        "anthropic_pretax_gain_bn": 9.5,
+        "advertising_revenue_bn": 17.7,
+        "advertising_yoy_pct": 22
+      },
+      "key_quotes": [
+        {
+          "speaker": "Andy Jassy",
+          "theme": "AWS Competitive Moat",
+          "text": "Customers want to be running their core and AI workloads in AWS given its stronger functionality, security, and operational performance."
+        },
+        {
+          "speaker": "Andy Jassy",
+          "theme": "AI Investment Rationale",
+          "text": "Amazon will continue to make significant investments, especially in AI, as it believes it to be a massive opportunity with the potential for strong returns on invested capital over the long term."
+        }
+      ],
+      "key_themes": [
+        "EPS $1.95 (beat $1.56 estimate by 25%) — Anthropic gain $9.5B pre-tax included",
+        "AWS $33B, $132B run rate; backlog $200B (+$10B+ of new deals in October alone)",
+        "Capex: $89.9B YTD; full year ~$125B — AI infrastructure at war-time spend levels",
+        "Advertising: 3rd consecutive accelerating quarter at 22% growth",
+        "FTC settlement $2.5B and severance $1.8B = $4.3B one-time charges in operating income",
+        "2026 capex expected to increase further from $125B base"
+      ],
+      "risks": [
+        "Capex $125B in 2025; increasing in 2026 — long payback horizon on AI infrastructure",
+        "FTC settlement signals regulatory scrutiny on Amazon's market practices",
+        "Anthropic gain inflates EPS; underlying earnings power lower"
+      ],
+      "tone": "Landmark quarter on scale; AWS backlog signals demand durability; capex commitment is a statement of conviction in AI supercycle"
+    },
+    {
+      "quarter": "Q4 2025",
+      "date": "2026-02-05",
+      "speakers": ["Andy Jassy (CEO)", "Brian Olsavsky (CFO)"],
+      "financials": {
+        "revenue_bn": 213.4,
+        "revenue_yoy_pct": 12,
+        "operating_income_bn": 25.0,
+        "full_year_ocf_bn": 139.5,
+        "full_year_ocf_yoy_pct": 20,
+        "trainium2_chips_deployed_mn": 1.4,
+        "trainium3_launched": true,
+        "leo_satellites_deployed": 180,
+        "leo_launches_planned_2026": 20,
+        "grocery_annual_gross_sales_bn": 150,
+        "q1_2026_guidance_low_bn": 173.5,
+        "q1_2026_guidance_high_bn": 178.5
+      },
+      "key_quotes": [
+        {
+          "speaker": "Andy Jassy",
+          "theme": "Trainium Momentum",
+          "text": "We have landed over 1.4 million Trainium2 chips — our fastest ramping chip launch ever. Trainium2 is 30-40% more price-performant than comparable GPUs and is a multi-billion dollar annualized revenue run rate business, with 100,000+ companies using it. We recently launched Trainium3, which is up to 40% more price-performant than Trainium2."
+        },
+        {
+          "speaker": "Andy Jassy",
+          "theme": "Amazon LEO",
+          "text": "Amazon has launched 180 satellites with more than 20 launches planned in 2026 and more than 30 in 2027. We expect to launch commercially in 2026 with dozens of commercial agreements already signed including AT&T, DIRECTV Latin America, JetBlue, and Australia's national broadband network."
+        },
+        {
+          "speaker": "Andy Jassy",
+          "theme": "Grocery Scale",
+          "text": "With over $150 billion in gross sales, Amazon.com is clearly a large grocer at this point. Everyday essentials grew nearly twice as fast as all other categories in 2025 and represents one out of three units sold."
+        }
+      ],
+      "key_themes": [
+        "Revenue $213.4B (+12%); operating income $25B; record Q4",
+        "Full year OCF $139.5B (+20%) — cash generation machine",
+        "Trainium2: 1.4M chips, 100K+ customers, multi-billion revenue; Trainium3 launched",
+        "Amazon LEO: 180 satellites live; commercial launch 2026 with signed enterprise agreements",
+        "Grocery: $150B gross sales, 150M+ Americans; 100+ new Whole Foods planned",
+        "Q1 2026 guidance $173.5-178.5B"
+      ],
+      "risks": [
+        "Q1 2026 EPS narrowly missed ($1.95 vs $1.96 estimate) — minor but noted",
+        "Satellite LEO: high capital intensity; competitive with Starlink",
+        "100+ new Whole Foods stores — significant retail real estate commitment"
+      ],
+      "tone": "Scaled and diversified; Trainium momentum signals custom silicon competitiveness vs Nvidia; LEO as connectivity moat; grocery as sleeper business"
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-04-20",
+      "source": "CNBC",
+      "headline": "Amazon to invest up to $25B more in Anthropic as part of expanded AI infrastructure deal",
+      "snippet": "Additional $25B commitment on top of prior $8B. Deal tied to AI infrastructure buildout for AWS.",
+      "tags": ["Anthropic", "AI", "investment", "AWS"]
+    },
+    {
+      "date": "2026-04-14",
+      "source": "Bloomberg",
+      "headline": "Amazon acquires satellite operator Globalstar for ~$11.6B to expand Project Leo",
+      "snippet": "Deal accelerates Amazon's satellite internet network, extending broadband access globally.",
+      "tags": ["M&A", "satellite", "Project Leo", "connectivity"]
+    },
+    {
+      "date": "2026-04-09",
+      "source": "The Motley Fool",
+      "headline": "Amazon surges after Jassy details AI and AWS growth plans — $15B AWS AI revenue run rate",
+      "snippet": "AWS AI services already at $15B annual revenue run rate. Jassy shareholder letter signals continued aggressive capex.",
+      "tags": ["AWS", "AI", "revenue", "growth"]
+    },
+    {
+      "date": "2026-04-15",
+      "source": "Capital.com",
+      "headline": "Amazon Stock Forecast: Jassy flags tariff cost pressures on e-commerce",
+      "snippet": "CFO and CEO cautioning on tariff impact to third-party seller costs and Amazon's own sourcing. Q1 2026 results due April 29.",
+      "tags": ["macro", "tariffs", "earnings preview", "risk"]
+    }
+  ]
+}
