@@ -79,6 +79,8 @@
             border-radius: 6px; color: var(--text-muted); font-size: 12px; cursor: pointer; transition: all 0.2s;
         }
         .add-ticker-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-subtle); }
+        .logout-btn { margin-top: 8px; }
+        .logout-btn:hover { border-color: var(--red); color: var(--red); background: var(--red-bg); }
 
         /* Main empty */
         .main-empty { flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
@@ -295,6 +297,7 @@
             <div class="ticker-list" id="ticker-list"></div>
             <div class="sidebar-footer">
                 <button class="add-ticker-btn" onclick="addTicker()">+ Add New Ticker</button>
+                <button class="add-ticker-btn logout-btn" onclick="logout()">Sign Out</button>
             </div>
         </div>
 
@@ -715,6 +718,11 @@ li { margin-bottom: 3px; }
 
     function addTicker() {
         alert('Coming soon \u2014 add custom company data via API or JSON upload.');
+    }
+
+    async function logout() {
+        await fetch('/api/logout', { method: 'POST' });
+        window.location.href = '/login';
     }
 
     loadCompanies();

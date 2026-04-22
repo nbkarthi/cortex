@@ -1,10 +1,12 @@
 import asyncio
+import hashlib
 import json
 import logging
 import os
+import secrets
 
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse, JSONResponse, Response
+from fastapi import FastAPI, Request, Cookie
+from fastapi.responses import HTMLResponse, JSONResponse, Response, RedirectResponse
 
 from data_loader import list_companies_detail, load_company, get_news
 from pipeline import run_pipeline
@@ -20,17 +22,68 @@ logger = logging.getLogger("cortex.app")
 app = FastAPI(title="Cortex")
 
 TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "templates", "index.html")
+LOGIN_TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "templates", "login.html")
+
+# Hardcoded credentials
+AUTH_USER = "admin@cortex.com"
+AUTH_PASS = "cortex@123"
+
+# Active sessions (in-memory)
+active_sessions: set[str] = set()
+
+
+def check_session(session_token: str | None) -> bool:
+    return session_token is not None and session_token in active_sessions
+
+
+@app.get("/login", response_class=HTMLResponse)
+async def login_page():
+    logger.info("GET /login")
+    with open(LOGIN_TEMPLATE_PATH) as f:
+        return f.read()
+
+
+@app.post("/api/login")
+async def login(request: Request):
+    body = await request.json()
+    email = body.get("email", "").strip()
+    password = body.get("password", "")
+    logger.info("POST /api/login — email=%s", email)
+
+    if email == AUTH_USER and password == AUTH_PASS:
+        token = secrets.token_hex(32)
+        active_sessions.add(token)
+        logger.info("Login successful for %s", email)
+        response = JSONResponse(content={"ok": True})
+        response.set_cookie(key="session", value=token, httponly=True, samesite="lax", max_age=86400)
+        return response
+    else:
+        logger.warning("Login failed for %s", email)
+        return JSONResponse(status_code=401, content={"detail": "Invalid email or password"})
+
+
+@app.post("/api/logout")
+async def logout(session: str | None = Cookie(default=None)):
+    if session:
+        active_sessions.discard(session)
+    response = JSONResponse(content={"ok": True})
+    response.delete_cookie("session")
+    return response
 
 
 @app.get("/", response_class=HTMLResponse)
-async def index():
+async def index(session: str | None = Cookie(default=None)):
+    if not check_session(session):
+        return RedirectResponse(url="/login", status_code=302)
     logger.info("GET / — serving UI")
     with open(TEMPLATE_PATH) as f:
         return f.read()
 
 
 @app.get("/api/companies")
-async def api_companies():
+async def api_companies(session: str | None = Cookie(default=None)):
+    if not check_session(session):
+        return JSONResponse(status_code=401, content={"detail": "Unauthorized"})
     logger.info("GET /api/companies")
     companies = list_companies_detail()
     logger.info("Returning %d companies", len(companies))
@@ -38,7 +91,9 @@ async def api_companies():
 
 
 @app.get("/api/company/{ticker}")
-async def api_company(ticker: str):
+async def api_company(ticker: str, session: str | None = Cookie(default=None)):
+    if not check_session(session):
+        return JSONResponse(status_code=401, content={"detail": "Unauthorized"})
     logger.info("GET /api/company/%s", ticker)
     try:
         data = load_company(ticker)
@@ -51,7 +106,9 @@ async def api_company(ticker: str):
 
 
 @app.post("/api/analyze")
-async def analyze(request: Request):
+async def analyze(request: Request, session: str | None = Cookie(default=None)):
+    if not check_session(session):
+        return JSONResponse(status_code=401, content={"detail": "Unauthorized"})
     body = await request.json()
     company = body.get("company", "").strip()
     logger.info("POST /api/analyze — company=%s", company)
@@ -71,8 +128,6 @@ async def analyze(request: Request):
     except Exception as e:
         logger.exception("Pipeline failed for %s", company)
         return JSONResponse(status_code=500, content={"detail": f"Analysis failed: {e}"})
-
-
 
 
 if __name__ == "__main__":
