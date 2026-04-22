@@ -1,6 +1,6 @@
 import json
 import os
-from src.config import DATA_DIR
+from config import DATA_DIR
 
 
 def load_company(name: str) -> dict:

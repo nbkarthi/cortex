@@ -2,16 +2,14 @@ import logging
 import sys
 import os
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(name)s] %(levelname)s: %(message)s",
     datefmt="%H:%M:%S",
 )
 
-from src.pipeline import run_pipeline
-from src.data_loader import list_companies
+from pipeline import run_pipeline
+from data_loader import list_companies
 
 
 def main():

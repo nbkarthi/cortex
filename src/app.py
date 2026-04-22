@@ -4,15 +4,13 @@ import logging
 import os
 import sys
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from starlette.responses import StreamingResponse
 from jinja2 import Template
 
-from src.data_loader import list_companies
-from src.pipeline import run_pipeline
+from data_loader import list_companies
+from pipeline import run_pipeline
 
 # Configure logging
 logging.basicConfig(

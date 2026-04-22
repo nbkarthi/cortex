@@ -1,6 +1,6 @@
 import json
 import logging
-from src.llm import call_llm
+from llm import call_llm
 
 logger = logging.getLogger("cortex.earnings")
 
