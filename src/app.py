@@ -3,9 +3,6 @@ import json
 import logging
 import os
 
-from io import BytesIO
-from fpdf import FPDF
-
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 
@@ -76,109 +73,6 @@ async def analyze(request: Request):
         return JSONResponse(status_code=500, content={"detail": f"Analysis failed: {e}"})
 
 
-@app.post("/api/memo-pdf")
-async def memo_pdf(request: Request):
-    body = await request.json()
-    memo_md = body.get("memo", "")
-    ticker = body.get("ticker", "memo")
-    logger.info("POST /api/memo-pdf — generating PDF for %s", ticker)
-
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_auto_page_break(auto=True, margin=20)
-    pdf.set_font("Helvetica", size=11)
-    pdf.write_html(md_to_html(memo_md))
-
-    buf = BytesIO()
-    pdf.output(buf)
-    pdf_bytes = buf.getvalue()
-
-    logger.info("PDF generated for %s — %d bytes", ticker, len(pdf_bytes))
-    return Response(
-        content=pdf_bytes,
-        media_type="application/pdf",
-        headers={"Content-Disposition": f"attachment; filename={ticker}_memo.pdf"},
-    )
-
-
-def md_to_html(text: str) -> str:
-    """Convert markdown to simple HTML that fpdf2 write_html supports."""
-    import re
-    lines = text.split("\n")
-    html_lines = []
-    in_table = False
-    in_list = False
-    table_rows = []
-
-    def bold(s):
-        return re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
-
-    for line in lines:
-        stripped = line.strip()
-
-        # Table separator row - skip
-        if re.match(r"^\|[-| :]+\|$", stripped):
-            continue
-
-        # Table row
-        if stripped.startswith("|") and stripped.endswith("|"):
-            if in_list:
-                html_lines.append("</ul>")
-                in_list = False
-            cells = [c.strip() for c in stripped.split("|")[1:-1]]
-            if not in_table:
-                in_table = True
-                table_rows = []
-                header = "".join(f'<th align="left"><b>{bold(c)}</b></th>' for c in cells)
-                table_rows.append(f"<tr>{header}</tr>")
-            else:
-                row = "".join(f"<td>{bold(c)}</td>" for c in cells)
-                table_rows.append(f"<tr>{row}</tr>")
-            continue
-
-        # Close table if we left it
-        if in_table:
-            html_lines.append('<table border="1" cellpadding="4">' + "".join(table_rows) + "</table><br>")
-            in_table = False
-            table_rows = []
-
-        # List items (- or 1.)
-        is_bullet = stripped.startswith("- ")
-        is_numbered = bool(re.match(r"^\d+\.\s", stripped))
-        if is_bullet or is_numbered:
-            if not in_list:
-                html_lines.append("<ul>")
-                in_list = True
-            content = stripped[2:] if is_bullet else re.sub(r"^\d+\.\s", "", stripped)
-            html_lines.append(f"<li>{bold(content)}</li>")
-            continue
-
-        # Close list if we left it
-        if in_list:
-            html_lines.append("</ul>")
-            in_list = False
-
-        if stripped.startswith("# "):
-            html_lines.append(f"<h1>{bold(stripped[2:])}</h1>")
-        elif stripped.startswith("## "):
-            html_lines.append(f'<h2><font color="#2563eb">{bold(stripped[3:])}</font></h2>')
-        elif stripped.startswith("### "):
-            html_lines.append(f"<h3>{bold(stripped[4:])}</h3>")
-        elif stripped.startswith("---"):
-            html_lines.append("<br><hr><br>")
-        elif stripped.startswith("> "):
-            html_lines.append(f'<font color="#6b7280"><i>{bold(stripped[2:])}</i></font><br>')
-        elif stripped == "":
-            html_lines.append("<br>")
-        else:
-            html_lines.append(f"{bold(stripped)}<br>")
-
-    if in_list:
-        html_lines.append("</ul>")
-    if in_table:
-        html_lines.append('<table border="1" cellpadding="4">' + "".join(table_rows) + "</table>")
-
-    return "\n".join(html_lines)
 
 
 if __name__ == "__main__":

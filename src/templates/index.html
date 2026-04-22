@@ -242,9 +242,11 @@
         }
         .memo-download-btn {
             padding: 8px 18px; background: var(--accent); color: #fff; border: none; border-radius: 6px;
-            font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+            font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block;
         }
         .memo-download-btn:hover { background: var(--accent-hover); box-shadow: var(--shadow-md); }
+        .memo-download-btn.pdf { background: var(--text-primary); }
+        .memo-download-btn.pdf:hover { background: var(--text-secondary); }
         .memo-meta-text { font-size: 12px; color: var(--text-muted); }
 
         /* Status bar */
@@ -353,7 +355,8 @@
                             </div>
                             <div id="analysis-memo-wrap">
                                 <div class="memo-toolbar" id="memo-toolbar" style="display:none;">
-                                    <button class="memo-download-btn" onclick="downloadPDF()">Download PDF</button>
+                                    <a class="memo-download-btn" id="download-link" href="#" download>Download .md</a>
+                                    <button class="memo-download-btn pdf" onclick="downloadPDF()">Download PDF</button>
                                     <span class="memo-meta-text" id="memo-meta"></span>
                                 </div>
                                 <div id="analysis-memo" class="memo-render"></div>
@@ -654,36 +657,60 @@
         document.getElementById('analysis-earnings').innerHTML = md(data.earnings_analysis);
         document.getElementById('analysis-sentiment').innerHTML = md(data.sentiment_analysis);
 
+        const blob = new Blob([data.memo], { type: 'text/markdown' });
+        const dl = document.getElementById('download-link');
+        dl.href = URL.createObjectURL(blob);
+        dl.download = data.ticker + '_ic_memo.md';
+
         document.getElementById('memo-meta').textContent = `${data.quarter} vs ${data.previous_quarter} | ${data.elapsed_seconds}s`;
         document.getElementById('memo-toolbar').style.display = 'flex';
         switchAnalysisTab('memo', document.querySelector('.analysis-tab-btn'));
     }
 
-    async function downloadPDF() {
+    function downloadPDF() {
         if (!currentTicker || !analysisCache[currentTicker]) return;
-        const data = analysisCache[currentTicker];
-        const btn = document.querySelector('.memo-download-btn');
-        btn.textContent = 'Generating PDF...';
-        btn.disabled = true;
-        try {
-            const res = await fetch('/api/memo-pdf', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ memo: data.memo, ticker: data.ticker })
-            });
-            const blob = await res.blob();
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = data.ticker + '_memo.pdf';
-            a.click();
-            URL.revokeObjectURL(url);
-        } catch (e) {
-            alert('PDF generation failed: ' + e.message);
-        } finally {
-            btn.textContent = 'Download PDF';
-            btn.disabled = false;
-        }
+        const content = document.getElementById('analysis-memo').innerHTML;
+        const ticker = analysisCache[currentTicker].ticker;
+
+        const html = `<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>${ticker} IC Memo</title>
+<style>
+@media print { @page { size: A4; margin: 2cm; } }
+body { font-family: Helvetica, Arial, sans-serif; font-size: 11pt; color: #1a1d23; line-height: 1.7; max-width: 700px; margin: 0 auto; padding: 20px; }
+h1 { font-size: 18pt; margin-bottom: 4px; }
+h2 { font-size: 13pt; color: #2563eb; border-bottom: 1px solid #e2e5ea; padding-bottom: 4px; margin-top: 20px; }
+h3 { font-size: 11pt; margin-top: 14px; }
+table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 10pt; }
+th, td { padding: 6px 10px; border: 1px solid #d0d4db; text-align: left; }
+th { background: #f8f9fb; font-weight: 600; }
+blockquote { border-left: 3px solid #2563eb; padding-left: 12px; color: #6b7280; margin: 10px 0; }
+hr { border: none; border-top: 1px solid #e2e5ea; margin: 16px 0; }
+strong { color: #1a1d23; }
+ul, ol { padding-left: 20px; }
+li { margin-bottom: 3px; }
+</style></head><body>${content}</body></html>`;
+
+        const blob = new Blob([html], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+
+        const iframe = document.createElement('iframe');
+        iframe.style.position = 'fixed';
+        iframe.style.right = '0';
+        iframe.style.bottom = '0';
+        iframe.style.width = '0';
+        iframe.style.height = '0';
+        iframe.style.border = 'none';
+        iframe.src = url;
+
+        iframe.onload = function() {
+            iframe.contentWindow.print();
+            setTimeout(() => {
+                document.body.removeChild(iframe);
+                URL.revokeObjectURL(url);
+            }, 1000);
+        };
+
+        document.body.appendChild(iframe);
     }
 
     function addTicker() {
