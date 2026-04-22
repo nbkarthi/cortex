@@ -1,17 +1,24 @@
 import json
+import logging
 import os
 from config import DATA_DIR
 
+logger = logging.getLogger("cortex.data")
 
-def load_company(name: str) -> dict:
-    """Load company data by name (case-insensitive)."""
+
+def _load_index() -> dict:
     index_path = os.path.join(DATA_DIR, "index.json")
     with open(index_path) as f:
-        index = json.load(f)
+        return json.load(f)
 
+
+def load_company(name: str) -> dict:
+    """Load company data by name or ticker (case-insensitive)."""
+    index = _load_index()
     for company in index["companies"]:
         if company["name"].lower() == name.lower() or company["ticker"].lower() == name.lower():
             file_path = os.path.join(DATA_DIR, company["file"])
+            logger.info("Loading company data from %s", file_path)
             with open(file_path) as f:
                 return json.load(f)
 
@@ -31,7 +38,23 @@ def get_news(data: dict) -> list[dict]:
 
 def list_companies() -> list[str]:
     """Return list of available company names."""
-    index_path = os.path.join(DATA_DIR, "index.json")
-    with open(index_path) as f:
-        index = json.load(f)
+    index = _load_index()
     return [c["name"] for c in index["companies"]]
+
+
+def list_companies_detail() -> list[dict]:
+    """Return detailed company list for the sidebar."""
+    index = _load_index()
+    result = []
+    for c in index["companies"]:
+        file_path = os.path.join(DATA_DIR, c["file"])
+        with open(file_path) as f:
+            data = json.load(f)
+        result.append({
+            "name": data["company"],
+            "ticker": data["ticker"],
+            "sector": data.get("sector", ""),
+            "transcript_count": len(data.get("transcripts", [])),
+            "news_count": len(data.get("news", [])),
+        })
+    return result

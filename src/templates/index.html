@@ -5,246 +5,692 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cortex — AI Investment Research</title>
     <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fb;
+            --bg-card: #ffffff;
+            --bg-hover: #f1f3f5;
+            --bg-accent-light: #eef3ff;
+            --border: #e2e5ea;
+            --border-light: #d0d4db;
+            --text-primary: #1a1d23;
+            --text-secondary: #4b5563;
+            --text-muted: #9ca3af;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --accent-subtle: #eef3ff;
+            --green: #16a34a;
+            --green-bg: #f0fdf4;
+            --green-border: #bbf7d0;
+            --red: #dc2626;
+            --red-bg: #fef2f2;
+            --red-border: #fecaca;
+            --yellow: #ca8a04;
+            --yellow-bg: #fefce8;
+            --radius: 8px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #e0e0e0; min-height: 100vh; }
-        .header { padding: 24px 40px; border-bottom: 1px solid #1a1a1a; }
-        .header h1 { font-size: 24px; font-weight: 700; color: #fff; }
-        .header span { color: #666; font-size: 14px; margin-left: 12px; }
-        .main { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        .search-box { display: flex; gap: 12px; margin-bottom: 32px; }
-        .search-box input {
-            flex: 1; padding: 14px 20px; background: #141414; border: 1px solid #2a2a2a;
-            border-radius: 8px; color: #fff; font-size: 16px; outline: none;
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif; background: var(--bg-secondary); color: var(--text-primary); height: 100vh; overflow: hidden; font-size: 14px; }
+
+        /* Layout */
+        .layout { display: flex; height: 100vh; }
+        .sidebar { width: 272px; border-right: 1px solid var(--border); display: flex; flex-direction: column; background: var(--bg-primary); flex-shrink: 0; }
+        .main { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: var(--bg-secondary); }
+
+        /* Sidebar */
+        .sidebar-header { padding: 20px 16px 16px; }
+        .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+        .logo-icon { width: 30px; height: 30px; background: var(--accent); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; color: #fff; }
+        .logo-text { font-size: 17px; font-weight: 700; letter-spacing: -0.5px; color: var(--text-primary); }
+        .logo-sub { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 500; }
+
+        .search-wrapper { position: relative; }
+        .search-wrapper input {
+            width: 100%; padding: 9px 12px 9px 34px; background: var(--bg-secondary); border: 1px solid var(--border);
+            border-radius: 6px; color: var(--text-primary); font-size: 13px; outline: none; transition: border-color 0.2s;
         }
-        .search-box input:focus { border-color: #4a9eff; }
-        .search-box button {
-            padding: 14px 32px; background: #4a9eff; color: #fff; border: none;
-            border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;
+        .search-wrapper input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+        .search-wrapper input::placeholder { color: var(--text-muted); }
+        .search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 14px; pointer-events: none; }
+
+        .section-label { padding: 12px 16px 6px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); }
+
+        .ticker-list { flex: 1; overflow-y: auto; padding: 0 8px; }
+        .ticker-item {
+            display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 6px;
+            cursor: pointer; transition: all 0.15s; margin-bottom: 1px;
         }
-        .search-box button:hover { background: #3a8eef; }
-        .search-box button:disabled { background: #333; cursor: not-allowed; }
-        .companies { display: flex; gap: 8px; margin-bottom: 32px; }
-        .companies button {
-            padding: 8px 16px; background: #1a1a1a; border: 1px solid #2a2a2a;
-            border-radius: 6px; color: #aaa; font-size: 13px; cursor: pointer;
+        .ticker-item:hover { background: var(--bg-hover); }
+        .ticker-item.active { background: var(--accent-subtle); }
+        .ticker-badge {
+            width: 38px; height: 38px; border-radius: 8px; display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 10px; letter-spacing: 0.3px; flex-shrink: 0; border: 1px solid var(--border);
         }
-        .companies button:hover { border-color: #4a9eff; color: #fff; }
-        .status { padding: 16px 20px; background: #0d1117; border: 1px solid #1a2332; border-radius: 8px; margin-bottom: 20px; display: none; }
-        .status .step { color: #666; font-size: 13px; margin-bottom: 4px; }
-        .status .step.active { color: #4a9eff; }
-        .status .step.done { color: #3fb950; }
-        .status .step.done::before { content: "✓ "; }
-        .status .step.active::before { content: "● "; }
-        .status .step.pending::before { content: "○ "; color: #333; }
-        .error { padding: 16px; background: #1a0a0a; border: 1px solid #4a1a1a; border-radius: 8px; color: #f85149; margin-bottom: 20px; display: none; }
-        .tabs { display: flex; gap: 0; border-bottom: 1px solid #2a2a2a; margin-bottom: 24px; }
-        .tabs button {
-            padding: 12px 24px; background: none; border: none; border-bottom: 2px solid transparent;
-            color: #666; font-size: 14px; cursor: pointer;
+        .ticker-info { flex: 1; min-width: 0; }
+        .ticker-name { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+        .ticker-sector { font-size: 11px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+        .ticker-meta { font-size: 10px; color: var(--text-muted); display: flex; gap: 8px; margin-top: 2px; }
+
+        .sidebar-footer { padding: 12px 16px; border-top: 1px solid var(--border); }
+        .add-ticker-btn {
+            width: 100%; padding: 9px; background: transparent; border: 1px dashed var(--border);
+            border-radius: 6px; color: var(--text-muted); font-size: 12px; cursor: pointer; transition: all 0.2s;
         }
-        .tabs button.active { color: #fff; border-bottom-color: #4a9eff; }
-        .tabs button:hover { color: #ccc; }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-        .result { display: none; }
-        .result.visible { display: block; }
-        .memo-content {
-            background: #111; border: 1px solid #1a1a1a; border-radius: 8px; padding: 32px;
-            line-height: 1.7; font-size: 15px;
+        .add-ticker-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-subtle); }
+
+        /* Main empty */
+        .main-empty { flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
+        .main-empty-icon { font-size: 36px; color: var(--border); }
+        .main-empty-text { color: var(--text-muted); font-size: 14px; }
+
+        /* Main header */
+        .main-header {
+            padding: 16px 28px; border-bottom: 1px solid var(--border); display: flex; align-items: center;
+            justify-content: space-between; background: var(--bg-primary); flex-shrink: 0;
         }
-        .memo-content h1 { font-size: 22px; margin-bottom: 8px; color: #fff; }
-        .memo-content h2 { font-size: 17px; margin-top: 24px; margin-bottom: 12px; color: #4a9eff; border-bottom: 1px solid #1a1a1a; padding-bottom: 6px; }
-        .memo-content h3 { font-size: 15px; margin-top: 16px; margin-bottom: 8px; color: #ccc; }
-        .memo-content p { margin-bottom: 10px; }
-        .memo-content ul, .memo-content ol { margin-left: 20px; margin-bottom: 12px; }
-        .memo-content li { margin-bottom: 6px; }
-        .memo-content strong { color: #fff; }
-        .memo-content blockquote { border-left: 3px solid #4a9eff; padding-left: 16px; color: #999; margin: 12px 0; }
-        .memo-content table { width: 100%; border-collapse: collapse; margin: 12px 0; }
-        .memo-content th, .memo-content td { padding: 8px 12px; border: 1px solid #2a2a2a; text-align: left; font-size: 13px; }
-        .memo-content th { background: #1a1a1a; color: #aaa; }
-        .memo-content hr { border: none; border-top: 1px solid #2a2a2a; margin: 20px 0; }
-        .meta { font-size: 13px; color: #666; margin-top: 16px; }
-        .download { display: inline-block; margin-top: 12px; padding: 8px 16px; background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 6px; color: #4a9eff; text-decoration: none; font-size: 13px; }
-        .download:hover { border-color: #4a9eff; }
-        .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid #333; border-top-color: #4a9eff; border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 8px; vertical-align: middle; }
+        .company-title { display: flex; align-items: center; gap: 12px; }
+        .company-title h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+        .company-title .badge { padding: 3px 8px; background: var(--accent-subtle); color: var(--accent); border-radius: 4px; font-size: 12px; font-weight: 600; }
+        .company-title .sector-tag { font-size: 13px; color: var(--text-muted); }
+
+        .analyze-btn {
+            padding: 9px 20px; background: var(--accent); color: #fff; border: none; border-radius: 6px;
+            font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px;
+        }
+        .analyze-btn:hover { background: var(--accent-hover); box-shadow: var(--shadow-md); }
+        .analyze-btn:disabled { opacity: 0.5; cursor: not-allowed; box-shadow: none; }
         @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Tabs */
+        .tabs-bar { display: flex; gap: 0; border-bottom: 1px solid var(--border); background: var(--bg-primary); padding: 0 28px; flex-shrink: 0; }
+        .tab-btn {
+            padding: 12px 16px; background: none; border: none; border-bottom: 2px solid transparent;
+            color: var(--text-muted); font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .tab-btn:hover { color: var(--text-secondary); }
+        .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+        .tab-count { background: var(--bg-secondary); color: var(--text-muted); padding: 1px 6px; border-radius: 10px; font-size: 11px; margin-left: 4px; }
+
+        /* Content area */
+        .content { flex: 1; overflow-y: auto; padding: 20px 28px; }
+
+        /* ===== TRANSCRIPT CARDS ===== */
+        .transcript-card {
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+            margin-bottom: 14px; box-shadow: var(--shadow-sm); overflow: hidden;
+        }
+        .transcript-card:hover { box-shadow: var(--shadow-md); }
+
+        /* Top row: quarter info */
+        .tc-top {
+            padding: 16px 20px 12px; border-bottom: 1px solid var(--border); background: var(--bg-secondary);
+        }
+        .tc-top-row { display: flex; align-items: center; justify-content: space-between; }
+        .tc-quarter { font-size: 15px; font-weight: 700; color: var(--text-primary); }
+        .tc-date { font-size: 12px; color: var(--text-muted); }
+        .tc-speakers-top { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+        .tc-speaker-pill { font-size: 11px; color: var(--text-secondary); background: var(--bg-primary); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border); }
+
+        /* Financial metrics - full width row */
+        .tc-metrics {
+            display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid var(--border);
+        }
+        .tc-metric {
+            padding: 14px 20px; text-align: center; border-right: 1px solid var(--border);
+        }
+        .tc-metric:last-child { border-right: none; }
+        .tc-metric-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-muted); font-weight: 600; margin-bottom: 4px; }
+        .tc-metric-value { font-size: 18px; font-weight: 700; color: var(--text-primary); }
+        .tc-metric-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+        .tc-metric-value.positive { color: var(--green); }
+        .tc-metric-value.negative { color: var(--red); }
+        .eps-badge {
+            display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 3px; margin-left: 6px; vertical-align: middle;
+        }
+        .eps-badge.beat { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+        .eps-badge.miss { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+
+        /* Body sections */
+        .tc-body { padding: 16px 20px; }
+        .tc-section { margin-bottom: 14px; }
+        .tc-section:last-child { margin-bottom: 0; }
+        .tc-section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-muted); margin-bottom: 6px; }
+
+        .tc-tone { font-size: 13px; color: var(--text-secondary); line-height: 1.5; font-style: italic; padding: 8px 12px; background: var(--bg-secondary); border-radius: 6px; border-left: 3px solid var(--accent); }
+
+        /* Collapsible section toggle (shared by themes, risks, quotes) */
+        .tc-toggle {
+            font-size: 12px; color: var(--text-secondary); cursor: pointer; background: none; border: 1px solid var(--border);
+            font-weight: 500; padding: 6px 12px; border-radius: 6px; display: flex; align-items: center; gap: 6px;
+            transition: all 0.15s; width: 100%;
+        }
+        .tc-toggle:hover { background: var(--bg-hover); border-color: var(--border-light); }
+        .tc-toggle .arrow { transition: transform 0.2s; font-size: 10px; }
+        .tc-toggle.open .arrow { transform: rotate(90deg); }
+        .tc-toggle .toggle-count { background: var(--bg-secondary); padding: 1px 6px; border-radius: 10px; font-size: 10px; color: var(--text-muted); margin-left: auto; }
+        .tc-collapsible { display: none; margin-top: 8px; }
+        .tc-collapsible.open { display: block; }
+
+        .tc-theme-list { margin: 0; padding-left: 20px; }
+        .tc-theme-list li {
+            font-size: 13px; color: var(--text-secondary); line-height: 1.6; padding: 2px 0;
+        }
+        .tc-risk-list { margin: 0; padding-left: 20px; }
+        .tc-risk-list li {
+            font-size: 13px; color: var(--red); line-height: 1.6; padding: 2px 0;
+        }
+
+        .tc-quote {
+            padding: 10px 14px; background: var(--bg-secondary); border-radius: 6px; margin-bottom: 6px;
+            border-left: 3px solid var(--border-light);
+        }
+        .tc-quote-text { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+        .tc-quote-attr { font-size: 11px; color: var(--text-muted); margin-top: 4px; font-weight: 500; }
+
+        /* ===== NEWS CARDS ===== */
+        .news-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .news-card {
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 18px;
+            box-shadow: var(--shadow-sm); transition: box-shadow 0.2s;
+        }
+        .news-card:hover { box-shadow: var(--shadow-md); }
+        .news-headline { font-size: 14px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; color: var(--text-primary); }
+        .news-meta { font-size: 11px; color: var(--text-muted); margin-bottom: 8px; display: flex; gap: 10px; }
+        .news-snippet { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 10px; }
+        .news-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+        .news-tag { padding: 2px 7px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 3px; font-size: 10px; color: var(--text-muted); }
+
+        /* ===== ANALYSIS ===== */
+        .analysis-container { display: none; }
+        .analysis-container.visible { display: block; }
+        .analysis-placeholder {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 80px 20px; text-align: center;
+        }
+        .analysis-placeholder-icon { font-size: 36px; margin-bottom: 12px; color: var(--border-light); }
+        .analysis-placeholder-text { color: var(--text-muted); font-size: 13px; max-width: 360px; line-height: 1.6; }
+
+        .analysis-tabs { display: flex; gap: 6px; margin-bottom: 16px; }
+        .analysis-tab-btn {
+            padding: 7px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;
+            color: var(--text-secondary); font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .analysis-tab-btn:hover { border-color: var(--border-light); background: var(--bg-hover); }
+        .analysis-tab-btn.active { background: var(--accent-subtle); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+
+        .memo-render {
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+            padding: 28px; line-height: 1.8; font-size: 14px; box-shadow: var(--shadow-sm);
+        }
+        .memo-render h1 { font-size: 19px; margin-bottom: 4px; color: var(--text-primary); font-weight: 700; }
+        .memo-render h2 { font-size: 14px; margin-top: 22px; margin-bottom: 8px; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; }
+        .memo-render h3 { font-size: 13px; margin-top: 14px; margin-bottom: 5px; color: var(--text-primary); font-weight: 600; }
+        .memo-render p { margin-bottom: 8px; color: var(--text-secondary); }
+        .memo-render ul, .memo-render ol { margin-left: 20px; margin-bottom: 10px; color: var(--text-secondary); }
+        .memo-render li { margin-bottom: 4px; }
+        .memo-render strong { color: var(--text-primary); }
+        .memo-render blockquote { border-left: 3px solid var(--accent); padding: 8px 14px; color: var(--text-muted); margin: 10px 0; background: var(--accent-subtle); border-radius: 0 6px 6px 0; }
+        .memo-render table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }
+        .memo-render th, .memo-render td { padding: 8px 12px; border: 1px solid var(--border); text-align: left; }
+        .memo-render th { background: var(--bg-secondary); color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; }
+        .memo-render hr { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
+
+        .memo-toolbar {
+            display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+        }
+        .memo-download-btn {
+            padding: 8px 18px; background: var(--accent); color: #fff; border: none; border-radius: 6px;
+            font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+        }
+        .memo-download-btn:hover { background: var(--accent-hover); box-shadow: var(--shadow-md); }
+        .memo-meta-text { font-size: 12px; color: var(--text-muted); }
+
+        /* Status bar */
+        .status-bar {
+            display: none; padding: 10px 28px; background: var(--bg-primary); border-bottom: 1px solid var(--border); flex-shrink: 0;
+        }
+        .status-bar.visible { display: flex; align-items: center; gap: 16px; }
+        .status-step { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 5px; font-weight: 500; }
+        .status-step.done { color: var(--green); }
+        .status-step.active { color: var(--accent); }
+        .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--border); flex-shrink: 0; }
+        .status-step.done .status-dot { background: var(--green); }
+        .status-step.active .status-dot { background: var(--accent); animation: pulse 1.5s ease-in-out infinite; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .status-connector { width: 20px; height: 1px; background: var(--border); }
+
+        /* Error */
+        .error-banner { display: none; padding: 10px 28px; background: var(--red-bg); border-bottom: 1px solid var(--red-border); color: var(--red); font-size: 13px; flex-shrink: 0; }
+        .error-banner.visible { display: block; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Cortex<span>AI Investment Research</span></h1>
-    </div>
-    <div class="main">
-        <div class="search-box">
-            <input type="text" id="company-input" placeholder="Enter company name — e.g. Nvidia, Tesla, Amazon" autofocus>
-            <button id="analyze-btn" onclick="analyze()">Analyze</button>
-        </div>
-        <div class="companies">
-            {% for name in companies %}
-            <button onclick="quickSelect('{{ name }}')">{{ name }}</button>
-            {% endfor %}
+    <div class="layout">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">C</div>
+                    <div>
+                        <div class="logo-text">Cortex</div>
+                        <div class="logo-sub">Investment Research</div>
+                    </div>
+                </div>
+                <div class="search-wrapper">
+                    <span class="search-icon">&#x1F50D;</span>
+                    <input type="text" id="ticker-search" placeholder="Search tickers...">
+                </div>
+            </div>
+            <div class="section-label">Coverage</div>
+            <div class="ticker-list" id="ticker-list"></div>
+            <div class="sidebar-footer">
+                <button class="add-ticker-btn" onclick="addTicker()">+ Add New Ticker</button>
+            </div>
         </div>
 
-        <div class="status" id="status-box">
-            <div class="step" id="step-1">Loading company data</div>
-            <div class="step" id="step-2">Running Earnings Analyzer Agent</div>
-            <div class="step" id="step-3">Running Sentiment/Narrative Agent</div>
-            <div class="step" id="step-4">Generating IC Memo</div>
-        </div>
+        <!-- Main -->
+        <div class="main" id="main-area">
+            <div class="main-empty" id="empty-state">
+                <div class="main-empty-icon">&#x25C8;</div>
+                <div class="main-empty-text">Select a company to view research data</div>
+            </div>
 
-        <div class="error" id="error-box"></div>
+            <div id="company-view" style="display:none; flex-direction:column; flex:1; overflow:hidden;">
+                <div class="main-header">
+                    <div class="company-title">
+                        <h1 id="company-name"></h1>
+                        <span class="badge" id="company-ticker"></span>
+                        <span class="sector-tag" id="company-sector"></span>
+                    </div>
+                    <button class="analyze-btn" id="analyze-btn" onclick="runAnalysis()">
+                        <span id="analyze-btn-text">Run Analysis</span>
+                    </button>
+                </div>
 
-        <div class="result" id="result-box">
-            <div class="tabs">
-                <button class="active" onclick="showTab('memo')">IC Memo</button>
-                <button onclick="showTab('earnings')">Earnings Analysis</button>
-                <button onclick="showTab('sentiment')">Sentiment & Narratives</button>
-            </div>
-            <div class="tab-content active" id="tab-memo">
-                <div class="memo-content" id="memo-content"></div>
-                <div class="meta" id="memo-meta"></div>
-                <a class="download" id="download-link" href="#" download>Download Memo (.md)</a>
-            </div>
-            <div class="tab-content" id="tab-earnings">
-                <div class="memo-content" id="earnings-content"></div>
-            </div>
-            <div class="tab-content" id="tab-sentiment">
-                <div class="memo-content" id="sentiment-content"></div>
+                <div class="status-bar" id="status-bar">
+                    <div class="status-step" id="st-1"><span class="status-dot"></span>Load Data</div>
+                    <div class="status-connector"></div>
+                    <div class="status-step" id="st-2"><span class="status-dot"></span>Earnings Analysis</div>
+                    <div class="status-connector"></div>
+                    <div class="status-step" id="st-3"><span class="status-dot"></span>Sentiment Analysis</div>
+                    <div class="status-connector"></div>
+                    <div class="status-step" id="st-4"><span class="status-dot"></span>IC Memo Preparation</div>
+                </div>
+
+                <div class="error-banner" id="error-banner"></div>
+
+                <div class="tabs-bar">
+                    <button class="tab-btn active" onclick="switchTab('transcripts', this)">Transcripts <span class="tab-count" id="count-transcripts">0</span></button>
+                    <button class="tab-btn" onclick="switchTab('news', this)">News & Events <span class="tab-count" id="count-news">0</span></button>
+                    <button class="tab-btn" onclick="switchTab('analysis', this)">Analysis</button>
+                </div>
+
+                <div class="content" id="content-area">
+                    <div id="tab-transcripts"></div>
+                    <div id="tab-news" style="display:none;"></div>
+                    <div id="tab-analysis" style="display:none;">
+                        <div class="analysis-container" id="analysis-placeholder">
+                            <div class="analysis-placeholder">
+                                <div class="analysis-placeholder-icon">&#x2B21;</div>
+                                <div class="analysis-placeholder-text">
+                                    Click <strong>Run Analysis</strong> to generate an IC Memo, Earnings Analysis, and Sentiment & Narrative report powered by AI.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analysis-container" id="analysis-results">
+                            <div class="analysis-tabs">
+                                <button class="analysis-tab-btn active" onclick="switchAnalysisTab('memo', this)">IC Memo</button>
+                                <button class="analysis-tab-btn" onclick="switchAnalysisTab('earnings', this)">Earnings Analysis</button>
+                                <button class="analysis-tab-btn" onclick="switchAnalysisTab('sentiment', this)">Sentiment & Narratives</button>
+                            </div>
+                            <div id="analysis-memo-wrap">
+                                <div class="memo-toolbar" id="memo-toolbar" style="display:none;">
+                                    <button class="memo-download-btn" onclick="downloadPDF()">Download PDF</button>
+                                    <span class="memo-meta-text" id="memo-meta"></span>
+                                </div>
+                                <div id="analysis-memo" class="memo-render"></div>
+                            </div>
+                            <div id="analysis-earnings" class="memo-render" style="display:none;"></div>
+                            <div id="analysis-sentiment" class="memo-render" style="display:none;"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Minimal markdown to HTML (covers headers, bold, lists, tables, blockquotes, hr)
-        function md(text) {
-            let html = text
-                .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-                .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-                .replace(/^# (.+)$/gm, '<h1>$1</h1>')
-                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-                .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
-                .replace(/^---$/gm, '<hr>')
-                .replace(/^- (.+)$/gm, '<li>$1</li>')
-                .replace(/^(\d+)\. (.+)$/gm, '<li>$2</li>');
+    let currentTicker = null;
+    let companyData = null;
+    let analysisCache = {};
 
-            // Wrap consecutive <li> in <ul>
-            html = html.replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>');
-
-            // Tables
-            html = html.replace(/^(\|.+\|)\n(\|[-| :]+\|)\n((?:\|.+\|\n?)+)/gm, function(match, header, sep, body) {
-                const ths = header.split('|').filter(c => c.trim()).map(c => `<th>${c.trim()}</th>`).join('');
-                const rows = body.trim().split('\n').map(row => {
-                    const tds = row.split('|').filter(c => c.trim()).map(c => `<td>${c.trim()}</td>`).join('');
-                    return `<tr>${tds}</tr>`;
-                }).join('');
-                return `<table><thead><tr>${ths}</tr></thead><tbody>${rows}</tbody></table>`;
-            });
-
-            // Paragraphs
-            html = html.split('\n\n').map(block => {
-                if (block.startsWith('<')) return block;
-                return block.replace(/\n/g, '<br>');
-            }).join('\n');
-
-            return html;
-        }
-
-        function quickSelect(name) {
-            document.getElementById('company-input').value = name;
-            analyze();
-        }
-
-        function showTab(name) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tabs button').forEach(el => el.classList.remove('active'));
-            document.getElementById('tab-' + name).classList.add('active');
-            event.target.classList.add('active');
-        }
-
-        function setStep(n, state) {
-            for (let i = 1; i <= 4; i++) {
-                const el = document.getElementById('step-' + i);
-                if (i < n) el.className = 'step done';
-                else if (i === n) el.className = 'step ' + state;
-                else el.className = 'step pending';
-            }
-        }
-
-        async function analyze() {
-            const input = document.getElementById('company-input');
-            const company = input.value.trim();
-            if (!company) return;
-
-            const btn = document.getElementById('analyze-btn');
-            const statusBox = document.getElementById('status-box');
-            const errorBox = document.getElementById('error-box');
-            const resultBox = document.getElementById('result-box');
-
-            btn.disabled = true;
-            btn.textContent = 'Analyzing...';
-            statusBox.style.display = 'block';
-            errorBox.style.display = 'none';
-            resultBox.classList.remove('visible');
-            setStep(1, 'active');
-
-            try {
-                const response = await fetch('/api/analyze', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ company })
-                });
-
-                const data = await response.json();
-
-                if (!response.ok) {
-                    throw new Error(data.detail || 'Analysis failed');
-                }
-
-                setStep(4, 'done');
-
-                document.getElementById('memo-content').innerHTML = md(data.memo);
-                document.getElementById('earnings-content').innerHTML = md(data.earnings_analysis);
-                document.getElementById('sentiment-content').innerHTML = md(data.sentiment_analysis);
-                document.getElementById('memo-meta').textContent =
-                    `${data.company} (${data.ticker}) | ${data.quarter} vs ${data.previous_quarter} | ${data.elapsed_seconds}s | Saved: ${data.memo_file}`;
-
-                const blob = new Blob([data.memo], { type: 'text/markdown' });
-                const url = URL.createObjectURL(blob);
-                const dl = document.getElementById('download-link');
-                dl.href = url;
-                dl.download = `${data.ticker}_memo.md`;
-
-                resultBox.classList.add('visible');
-                // Show memo tab by default
-                document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-                document.querySelectorAll('.tabs button').forEach(el => el.classList.remove('active'));
-                document.getElementById('tab-memo').classList.add('active');
-                document.querySelector('.tabs button').classList.add('active');
-
-            } catch (err) {
-                errorBox.textContent = err.message;
-                errorBox.style.display = 'block';
-                statusBox.style.display = 'none';
-            } finally {
-                btn.disabled = false;
-                btn.textContent = 'Analyze';
-            }
-        }
-
-        // Enter key to submit
-        document.getElementById('company-input').addEventListener('keydown', e => {
-            if (e.key === 'Enter') analyze();
+    // --- Markdown renderer ---
+    function md(text) {
+        if (!text) return '';
+        let h = text
+            .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+            .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+            .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
+            .replace(/^---$/gm, '<hr>')
+            .replace(/^- (.+)$/gm, '<li>$1</li>')
+            .replace(/^(\d+)\. (.+)$/gm, '<li>$2</li>');
+        h = h.replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>');
+        h = h.replace(/^(\|.+\|)\n(\|[-| :]+\|)\n((?:\|.+\|\n?)+)/gm, function(m, header, sep, body) {
+            const ths = header.split('|').filter(c=>c.trim()).map(c=>'<th>'+c.trim()+'</th>').join('');
+            const rows = body.trim().split('\n').map(r => {
+                const tds = r.split('|').filter(c=>c.trim()).map(c=>'<td>'+c.trim()+'</td>').join('');
+                return '<tr>'+tds+'</tr>';
+            }).join('');
+            return '<table><thead><tr>'+ths+'</tr></thead><tbody>'+rows+'</tbody></table>';
         });
+        h = h.split('\n\n').map(b => b.startsWith('<') ? b : b.replace(/\n/g,'<br>')).join('\n');
+        return h;
+    }
 
-        // SSE for live pipeline status
-        const evtSource = new EventSource('/api/status');
-        evtSource.onmessage = function(event) {
-            const data = JSON.parse(event.data);
-            if (data.step && data.state) {
-                setStep(data.step, data.state);
+    // --- Sidebar ---
+    async function loadCompanies() {
+        const res = await fetch('/api/companies');
+        const companies = await res.json();
+        renderSidebar(companies);
+    }
+
+    const TICKER_COLORS = { 'NVDA': '#76b900', 'TSLA': '#e31937', 'AMZN': '#ff9900' };
+
+    function renderSidebar(companies) {
+        const list = document.getElementById('ticker-list');
+        list.innerHTML = companies.map(c => `
+            <div class="ticker-item" data-ticker="${c.ticker}" data-name="${c.name}" onclick="selectCompany('${c.ticker}')">
+                <div class="ticker-badge" style="background:${(TICKER_COLORS[c.ticker]||'#2563eb')}15; color:${TICKER_COLORS[c.ticker]||'#2563eb'}; border-color:${(TICKER_COLORS[c.ticker]||'#2563eb')}30;">${c.ticker}</div>
+                <div class="ticker-info">
+                    <div class="ticker-name">${c.name}</div>
+                    <div class="ticker-sector">${c.sector}</div>
+                    <div class="ticker-meta">
+                        <span>${c.transcript_count} transcripts</span>
+                        <span>${c.news_count} news</span>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    document.getElementById('ticker-search').addEventListener('input', function() {
+        const q = this.value.toLowerCase();
+        document.querySelectorAll('.ticker-item').forEach(el => {
+            const name = el.dataset.name.toLowerCase();
+            const ticker = el.dataset.ticker.toLowerCase();
+            el.style.display = (name.includes(q) || ticker.includes(q)) ? '' : 'none';
+        });
+    });
+
+    // --- Select company ---
+    async function selectCompany(ticker) {
+        currentTicker = ticker;
+        document.querySelectorAll('.ticker-item').forEach(el => el.classList.toggle('active', el.dataset.ticker === ticker));
+        document.getElementById('empty-state').style.display = 'none';
+        document.getElementById('company-view').style.display = 'flex';
+
+        const res = await fetch('/api/company/' + ticker);
+        companyData = await res.json();
+
+        document.getElementById('company-name').textContent = companyData.company;
+        document.getElementById('company-ticker').textContent = companyData.ticker;
+        document.getElementById('company-sector').textContent = companyData.sector;
+        document.getElementById('count-transcripts').textContent = companyData.transcripts.length;
+        document.getElementById('count-news').textContent = (companyData.news || []).length;
+
+        renderTranscripts(companyData.transcripts);
+        renderNews(companyData.news || []);
+
+        if (analysisCache[ticker]) {
+            showAnalysisResults(analysisCache[ticker]);
+        } else {
+            document.getElementById('analysis-placeholder').style.display = 'block';
+            document.getElementById('analysis-placeholder').classList.add('visible');
+            document.getElementById('analysis-results').style.display = 'none';
+            document.getElementById('analysis-results').classList.remove('visible');
+            document.getElementById('memo-actions').style.display = 'none';
+        }
+
+        switchTab('transcripts', document.querySelector('.tab-btn'));
+    }
+
+    // --- Render transcripts (structured) ---
+    function renderTranscripts(transcripts) {
+        const container = document.getElementById('tab-transcripts');
+        const sorted = [...transcripts].reverse();
+
+        container.innerHTML = sorted.map((t, idx) => {
+            const f = t.financials;
+            const epsBeat = f.eps_reported > f.eps_estimate;
+            const epsLabel = epsBeat ? 'BEAT' : 'MISS';
+            const epsDiff = (f.eps_reported - f.eps_estimate).toFixed(2);
+            const reaction = f.stock_reaction_pct;
+            const reactionSign = reaction >= 0 ? '+' : '';
+            const themeCount = (t.key_themes || []).length;
+            const riskCount = (t.risks || []).length;
+            const quoteCount = (t.key_quotes || []).length;
+
+            const themes = '<ul class="tc-theme-list">' + (t.key_themes || []).map(th => `<li>${th}</li>`).join('') + '</ul>';
+            const risks = '<ul class="tc-risk-list">' + (t.risks || []).map(r => `<li>${r}</li>`).join('') + '</ul>';
+            const speakers = (t.speakers || []).map(s => `<span class="tc-speaker-pill">${s}</span>`).join('');
+
+            const quotes = (t.key_quotes || []).map(q => `
+                <div class="tc-quote">
+                    <div class="tc-quote-text">"${q.text}"</div>
+                    <div class="tc-quote-attr">${q.speaker} &mdash; ${q.theme}</div>
+                </div>
+            `).join('');
+
+            return `
+            <div class="transcript-card">
+                <div class="tc-top">
+                    <div class="tc-top-row">
+                        <div>
+                            <div class="tc-quarter">${t.quarter} <span style="font-weight:400;color:var(--text-muted);font-size:12px;">(${t.fiscal_year})</span></div>
+                        </div>
+                        <div class="tc-date">${t.date}</div>
+                    </div>
+                    <div class="tc-speakers-top">${speakers}</div>
+                </div>
+                <div class="tc-metrics">
+                    <div class="tc-metric">
+                        <div class="tc-metric-label">Revenue</div>
+                        <div class="tc-metric-value">$${f.revenue_bn}B</div>
+                    </div>
+                    <div class="tc-metric">
+                        <div class="tc-metric-label">EPS Reported</div>
+                        <div class="tc-metric-value">$${f.eps_reported} <span class="eps-badge ${epsBeat ? 'beat' : 'miss'}">${epsLabel} ${epsDiff >= 0 ? '+' : ''}${epsDiff}</span></div>
+                        <div class="tc-metric-sub">Estimate: $${f.eps_estimate}</div>
+                    </div>
+                    <div class="tc-metric">
+                        <div class="tc-metric-label">Stock Reaction</div>
+                        <div class="tc-metric-value ${reaction >= 0 ? 'positive' : 'negative'}">${reactionSign}${reaction}%</div>
+                    </div>
+                </div>
+                <div class="tc-body">
+                    <div class="tc-section">
+                        <div class="tc-section-label">Management Tone</div>
+                        <div class="tc-tone">${t.tone}</div>
+                    </div>
+                    <div class="tc-section">
+                        <button class="tc-toggle" onclick="toggleSection(this)">
+                            <span class="arrow">&#9654;</span> Key Themes <span class="toggle-count">${themeCount}</span>
+                        </button>
+                        <div class="tc-collapsible">${themes}</div>
+                    </div>
+                    <div class="tc-section">
+                        <button class="tc-toggle" onclick="toggleSection(this)">
+                            <span class="arrow">&#9654;</span> Risks <span class="toggle-count">${riskCount}</span>
+                        </button>
+                        <div class="tc-collapsible">${risks}</div>
+                    </div>
+                    <div class="tc-section">
+                        <button class="tc-toggle" onclick="toggleSection(this)">
+                            <span class="arrow">&#9654;</span> Key Quotes <span class="toggle-count">${quoteCount}</span>
+                        </button>
+                        <div class="tc-collapsible">${quotes}</div>
+                    </div>
+                </div>
+            </div>`;
+        }).join('');
+    }
+
+    function toggleSection(btn) {
+        const content = btn.nextElementSibling;
+        const isOpen = content.classList.toggle('open');
+        btn.classList.toggle('open', isOpen);
+    }
+
+    // --- Render news ---
+    function renderNews(news) {
+        const container = document.getElementById('tab-news');
+        if (!news.length) {
+            container.innerHTML = '<div class="analysis-placeholder"><div class="analysis-placeholder-text">No news items available.</div></div>';
+            return;
+        }
+        container.innerHTML = '<div class="news-grid">' + news.map(n => `
+            <div class="news-card">
+                <div class="news-headline">${n.headline}</div>
+                <div class="news-meta">
+                    <span>${n.date}</span>
+                    <span>${n.source}</span>
+                </div>
+                <div class="news-snippet">${n.snippet}</div>
+                <div class="news-tags">${(n.tags||[]).map(t => `<span class="news-tag">${t}</span>`).join('')}</div>
+            </div>
+        `).join('') + '</div>';
+    }
+
+    // --- Tab switching ---
+    function switchTab(name, btn) {
+        document.querySelectorAll('.tabs-bar .tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        ['transcripts', 'news', 'analysis'].forEach(t => {
+            document.getElementById('tab-' + t).style.display = t === name ? '' : 'none';
+        });
+    }
+
+    function switchAnalysisTab(name, btn) {
+        document.querySelectorAll('.analysis-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        ['memo', 'earnings', 'sentiment'].forEach(t => {
+            document.getElementById('analysis-' + t).style.display = t === name ? '' : 'none';
+        });
+    }
+
+    // --- Analysis ---
+    function setStatus(step, state) {
+        for (let i = 1; i <= 4; i++) {
+            const el = document.getElementById('st-' + i);
+            el.className = 'status-step' + (i < step ? ' done' : i === step ? ' ' + state : '');
+        }
+    }
+
+    async function runAnalysis() {
+        if (!currentTicker) return;
+        const btn = document.getElementById('analyze-btn');
+        const btnText = document.getElementById('analyze-btn-text');
+        const statusBar = document.getElementById('status-bar');
+        const errorBanner = document.getElementById('error-banner');
+
+        btn.disabled = true;
+        btnText.innerHTML = '<span style="display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:spin 0.7s linear infinite;vertical-align:middle;margin-right:6px;"></span>Analyzing...';
+        statusBar.classList.add('visible');
+        errorBanner.classList.remove('visible');
+        setStatus(1, 'active');
+
+        const stepTimers = [
+            setTimeout(() => setStatus(2, 'active'), 2000),
+            setTimeout(() => setStatus(3, 'active'), 15000),
+            setTimeout(() => setStatus(4, 'active'), 30000),
+        ];
+
+        try {
+            const res = await fetch('/api/analyze', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ company: currentTicker })
+            });
+            stepTimers.forEach(clearTimeout);
+
+            if (!res.ok) {
+                const err = await res.json();
+                throw new Error(err.detail || 'Analysis failed');
             }
-        };
+
+            const data = await res.json();
+            setStatus(4, 'done');
+            analysisCache[currentTicker] = data;
+            showAnalysisResults(data);
+            switchTab('analysis', document.querySelectorAll('.tab-btn')[2]);
+
+        } catch (e) {
+            stepTimers.forEach(clearTimeout);
+            statusBar.classList.remove('visible');
+            errorBanner.textContent = e.message;
+            errorBanner.classList.add('visible');
+        } finally {
+            btn.disabled = false;
+            btnText.textContent = 'Run Analysis';
+        }
+    }
+
+    function showAnalysisResults(data) {
+        document.getElementById('analysis-placeholder').style.display = 'none';
+        document.getElementById('analysis-results').style.display = 'block';
+        document.getElementById('analysis-results').classList.add('visible');
+
+        document.getElementById('analysis-memo').innerHTML = md(data.memo);
+        document.getElementById('analysis-earnings').innerHTML = md(data.earnings_analysis);
+        document.getElementById('analysis-sentiment').innerHTML = md(data.sentiment_analysis);
+
+        document.getElementById('memo-meta').textContent = `${data.quarter} vs ${data.previous_quarter} | ${data.elapsed_seconds}s`;
+        document.getElementById('memo-toolbar').style.display = 'flex';
+        switchAnalysisTab('memo', document.querySelector('.analysis-tab-btn'));
+    }
+
+    async function downloadPDF() {
+        if (!currentTicker || !analysisCache[currentTicker]) return;
+        const data = analysisCache[currentTicker];
+        const btn = document.querySelector('.memo-download-btn');
+        btn.textContent = 'Generating PDF...';
+        btn.disabled = true;
+        try {
+            const res = await fetch('/api/memo-pdf', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ memo: data.memo, ticker: data.ticker })
+            });
+            const blob = await res.blob();
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = data.ticker + '_memo.pdf';
+            a.click();
+            URL.revokeObjectURL(url);
+        } catch (e) {
+            alert('PDF generation failed: ' + e.message);
+        } finally {
+            btn.textContent = 'Download PDF';
+            btn.disabled = false;
+        }
+    }
+
+    function addTicker() {
+        alert('Coming soon \u2014 add custom company data via API or JSON upload.');
+    }
+
+    loadCompanies();
     </script>
 </body>
 </html>

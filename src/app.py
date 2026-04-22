@@ -2,14 +2,14 @@ import asyncio
 import json
 import logging
 import os
-import sys
+
+from io import BytesIO
+from fpdf import FPDF
 
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
-from starlette.responses import StreamingResponse
-from jinja2 import Template
+from fastapi.responses import HTMLResponse, JSONResponse, Response
 
-from data_loader import list_companies
+from data_loader import list_companies_detail, load_company, get_news
 from pipeline import run_pipeline
 
 # Configure logging
@@ -22,9 +22,6 @@ logger = logging.getLogger("cortex.app")
 
 app = FastAPI(title="Cortex")
 
-# SSE clients for live status updates
-status_clients: list[asyncio.Queue] = []
-
 TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "templates", "index.html")
 
 
@@ -32,29 +29,28 @@ TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "templates", "index.html
 async def index():
     logger.info("GET / — serving UI")
     with open(TEMPLATE_PATH) as f:
-        template = Template(f.read())
-    return template.render(companies=list_companies())
+        return f.read()
 
 
-@app.get("/api/status")
-async def status_stream():
-    queue = asyncio.Queue()
-    status_clients.append(queue)
-
-    async def event_generator():
-        try:
-            while True:
-                data = await queue.get()
-                yield f"data: {json.dumps(data)}\n\n"
-        except asyncio.CancelledError:
-            status_clients.remove(queue)
-
-    return StreamingResponse(event_generator(), media_type="text/event-stream")
+@app.get("/api/companies")
+async def api_companies():
+    logger.info("GET /api/companies")
+    companies = list_companies_detail()
+    logger.info("Returning %d companies", len(companies))
+    return companies
 
 
-async def broadcast_status(step: int, state: str):
-    for queue in status_clients:
-        await queue.put({"step": step, "state": state})
+@app.get("/api/company/{ticker}")
+async def api_company(ticker: str):
+    logger.info("GET /api/company/%s", ticker)
+    try:
+        data = load_company(ticker)
+        logger.info("Loaded %s — %d transcripts, %d news",
+                     data["company"], len(data["transcripts"]), len(data.get("news", [])))
+        return data
+    except ValueError as e:
+        logger.error("Company not found: %s", e)
+        return JSONResponse(status_code=404, content={"detail": str(e)})
 
 
 @app.post("/api/analyze")
@@ -65,35 +61,124 @@ async def analyze(request: Request):
 
     if not company:
         logger.warning("Empty company name submitted")
-        return {"detail": "Please enter a company name"}, 400
-
-    # Broadcast pipeline steps
-    await broadcast_status(1, "active")
+        return JSONResponse(status_code=400, content={"detail": "Please enter a company name"})
 
     try:
-        # Run pipeline in thread to not block the event loop
         loop = asyncio.get_event_loop()
-
-        async def run_with_status():
-            await broadcast_status(1, "done")
-            await broadcast_status(2, "active")
-            result = await loop.run_in_executor(None, run_pipeline, company)
-            return result
-
-        # Step-by-step status broadcasting via a wrapper
-        await broadcast_status(1, "active")
         result = await loop.run_in_executor(None, run_pipeline, company)
-        await broadcast_status(4, "done")
-
-        logger.info("Analysis complete for %s — returning result", company)
+        logger.info("Analysis complete for %s in %ss", company, result["elapsed_seconds"])
         return result
-
     except ValueError as e:
         logger.error("Company not found: %s", e)
-        return {"detail": str(e)}
+        return JSONResponse(status_code=404, content={"detail": str(e)})
     except Exception as e:
         logger.exception("Pipeline failed for %s", company)
-        return {"detail": f"Analysis failed: {e}"}
+        return JSONResponse(status_code=500, content={"detail": f"Analysis failed: {e}"})
+
+
+@app.post("/api/memo-pdf")
+async def memo_pdf(request: Request):
+    body = await request.json()
+    memo_md = body.get("memo", "")
+    ticker = body.get("ticker", "memo")
+    logger.info("POST /api/memo-pdf — generating PDF for %s", ticker)
+
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_auto_page_break(auto=True, margin=20)
+    pdf.set_font("Helvetica", size=11)
+    pdf.write_html(md_to_html(memo_md))
+
+    buf = BytesIO()
+    pdf.output(buf)
+    pdf_bytes = buf.getvalue()
+
+    logger.info("PDF generated for %s — %d bytes", ticker, len(pdf_bytes))
+    return Response(
+        content=pdf_bytes,
+        media_type="application/pdf",
+        headers={"Content-Disposition": f"attachment; filename={ticker}_memo.pdf"},
+    )
+
+
+def md_to_html(text: str) -> str:
+    """Convert markdown to simple HTML that fpdf2 write_html supports."""
+    import re
+    lines = text.split("\n")
+    html_lines = []
+    in_table = False
+    in_list = False
+    table_rows = []
+
+    def bold(s):
+        return re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
+
+    for line in lines:
+        stripped = line.strip()
+
+        # Table separator row - skip
+        if re.match(r"^\|[-| :]+\|$", stripped):
+            continue
+
+        # Table row
+        if stripped.startswith("|") and stripped.endswith("|"):
+            if in_list:
+                html_lines.append("</ul>")
+                in_list = False
+            cells = [c.strip() for c in stripped.split("|")[1:-1]]
+            if not in_table:
+                in_table = True
+                table_rows = []
+                header = "".join(f'<th align="left"><b>{bold(c)}</b></th>' for c in cells)
+                table_rows.append(f"<tr>{header}</tr>")
+            else:
+                row = "".join(f"<td>{bold(c)}</td>" for c in cells)
+                table_rows.append(f"<tr>{row}</tr>")
+            continue
+
+        # Close table if we left it
+        if in_table:
+            html_lines.append('<table border="1" cellpadding="4">' + "".join(table_rows) + "</table><br>")
+            in_table = False
+            table_rows = []
+
+        # List items (- or 1.)
+        is_bullet = stripped.startswith("- ")
+        is_numbered = bool(re.match(r"^\d+\.\s", stripped))
+        if is_bullet or is_numbered:
+            if not in_list:
+                html_lines.append("<ul>")
+                in_list = True
+            content = stripped[2:] if is_bullet else re.sub(r"^\d+\.\s", "", stripped)
+            html_lines.append(f"<li>{bold(content)}</li>")
+            continue
+
+        # Close list if we left it
+        if in_list:
+            html_lines.append("</ul>")
+            in_list = False
+
+        if stripped.startswith("# "):
+            html_lines.append(f"<h1>{bold(stripped[2:])}</h1>")
+        elif stripped.startswith("## "):
+            html_lines.append(f'<h2><font color="#2563eb">{bold(stripped[3:])}</font></h2>')
+        elif stripped.startswith("### "):
+            html_lines.append(f"<h3>{bold(stripped[4:])}</h3>")
+        elif stripped.startswith("---"):
+            html_lines.append("<br><hr><br>")
+        elif stripped.startswith("> "):
+            html_lines.append(f'<font color="#6b7280"><i>{bold(stripped[2:])}</i></font><br>')
+        elif stripped == "":
+            html_lines.append("<br>")
+        else:
+            html_lines.append(f"{bold(stripped)}<br>")
+
+    if in_list:
+        html_lines.append("</ul>")
+    if in_table:
+        html_lines.append('<table border="1" cellpadding="4">' + "".join(table_rows) + "</table>")
+
+    return "\n".join(html_lines)
 
 
 if __name__ == "__main__":
