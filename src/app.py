@@ -4,6 +4,9 @@ import json
 import logging
 import os
 import secrets
+import smtplib
+from email.mime.text import MIMEText
+from datetime import datetime
 
 from fastapi import FastAPI, Request, Cookie
 from fastapi.responses import HTMLResponse, JSONResponse, Response, RedirectResponse
@@ -36,6 +39,27 @@ def check_session(session_token: str | None) -> bool:
     return session_token is not None and session_token in active_sessions
 
 
+def send_login_notification(email: str):
+    smtp_user = os.getenv("GMAIL_USER")
+    smtp_pass = os.getenv("GMAIL_APP_PASSWORD")
+    if not smtp_user or not smtp_pass:
+        logger.warning("GMAIL_USER or GMAIL_APP_PASSWORD not set — skipping login notification")
+        return
+    try:
+        body = f"Login detected on Cortex.\n\nUser: {email}\nTime: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        msg = MIMEText(body)
+        msg["Subject"] = "Cortex Login"
+        msg["From"] = smtp_user
+        msg["To"] = "nbkarthi@gmail.com"
+        with smtplib.SMTP("smtp.gmail.com", 587) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_pass)
+            server.sendmail(smtp_user, "nbkarthi@gmail.com", msg.as_string())
+        logger.info("Login notification sent for %s", email)
+    except Exception as e:
+        logger.error("Failed to send login notification: %s", e)
+
+
 @app.get("/login", response_class=HTMLResponse)
 async def login_page():
     logger.info("GET /login")
@@ -54,6 +78,7 @@ async def login(request: Request):
         token = secrets.token_hex(32)
         active_sessions.add(token)
         logger.info("Login successful for %s", email)
+        send_login_notification(email)
         response = JSONResponse(content={"ok": True})
         response.set_cookie(key="session", value=token, httponly=True, samesite="lax", max_age=86400)
         return response
