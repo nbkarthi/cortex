@@ -1,0 +1,517 @@
+{
+  "company": "Alphabet Inc.",
+  "ticker": "GOOG",
+  "sector": "Communication Services",
+  "last_updated": "2026-04-24",
+  "transcripts": [
+    {
+      "quarter": "Q1 2026",
+      "date": "2026-04-15",
+      "speakers": [
+        "Bill Demchak (Chairman and Chief Executive Officer)",
+        "Rob Reilly (Chief Financial Officer)"
+      ],
+      "financials": {
+        "revenue_bn": 6.2,
+        "revenue_yoy_pct": null,
+        "eps_reported": 4.13,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Bill Demchak",
+          "theme": "Strong quarterly performance",
+          "text": "As you have seen, we are off to a really strong start this year. We achieved a great deal this quarter and we continue to build upon the strength of our franchise."
+        },
+        {
+          "speaker": "Bill Demchak",
+          "theme": "FirstBank acquisition",
+          "text": "We completed the acquisition of FirstBank early in the quarter and we are well on our way to a mid-June conversion."
+        },
+        {
+          "speaker": "Bill Demchak",
+          "theme": "Private credit risk assessment",
+          "text": "We do not see any loss content in this book and certainly do not see any exposure to a systemic event, which, by the way, we do not expect."
+        },
+        {
+          "speaker": "Rob Reilly",
+          "theme": "Basel III capital impact",
+          "text": "We expect the changes to be a net positive for our CET1 ratio relative to the current framework. Our initial assessment reflects a reduction of approximately 10% of our RWAs, or $45 billion to $50 billion."
+        },
+        {
+          "speaker": "Bill Demchak",
+          "theme": "Positive outlook",
+          "text": "Looking ahead, we are entering into the second quarter with a lot of momentum, and we continue to be excited about the opportunities in front of us."
+        },
+        {
+          "speaker": "Rob Reilly",
+          "theme": "Loan growth metrics",
+          "text": "Loan balances averaged $351 billion in the first quarter, an increase of $23 billion, or 7% linked quarter."
+        }
+      ],
+      "key_themes": [
+        "FirstBank acquisition adding $15 billion in loans and $22 billion in deposits",
+        "Organic loan growth at three-year high",
+        "Net interest margin expanded 11 basis points to 2.95%",
+        "13% year-over-year fee income growth",
+        "CET1 ratio of 10.1% (down 50 bps from year-end 2025)",
+        "Capital returned of $1.4 billion ($700M dividends, $700M repurchases)",
+        "Basel III proposal expected to reduce RWAs by $45-50 billion (10%)",
+        "Credit quality remains strong with stable allowance and nonperforming metrics"
+      ],
+      "risks": [
+        "Market concerns around energy prices, AI, and private credit",
+        "Nondepository financial institutions (NDFI) exposure requiring monitoring",
+        "Integration expenses of $97 million from FirstBank acquisition",
+        "Decline in noninterest income by $136 million (6%) linked quarter"
+      ],
+      "tone": "Optimistic and confident, with management highlighting strong financial performance, successful FirstBank acquisition integration, and positive momentum entering Q2.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2026/04/15/pnc-pnc-q1-2026-earnings-call-transcript/"
+    },
+    {
+      "quarter": "Q4 2025",
+      "date": "2026-02-26",
+      "speakers": [
+        "Scott Montross (President and CEO)",
+        "Aaron Wilkins (Chief Financial Officer)"
+      ],
+      "financials": {
+        "revenue_bn": 0.526,
+        "revenue_yoy_pct": 6.8,
+        "eps_reported": 3.56,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Scott Montross",
+          "theme": "Record Financial Performance",
+          "text": "2025 was another outstanding year for NWPX Infrastructure, Inc., marked by record financial performance, disciplined execution, operational improvements across our facilities, and sustained demand across our end markets."
+        },
+        {
+          "speaker": "Scott Montross",
+          "theme": "Revenue Growth",
+          "text": "Our annual net sales reached $526,000,000, up 6.8% from 2024 and the highest in our company's history."
+        },
+        {
+          "speaker": "Scott Montross",
+          "theme": "Profitability",
+          "text": "This translated into record profitability with earnings of $3.56 per share and free cash flow of $47,100,000, or $4.74 per share, demonstrating the strength, consistency, and quality of our earnings and the durability of our cash generation."
+        },
+        {
+          "speaker": "Scott Montross",
+          "theme": "Precast Segment Growth",
+          "text": "Precast revenue increased 13.3% year over year to a new annual record of $175,100,000."
+        },
+        {
+          "speaker": "Scott Montross",
+          "theme": "2026 Outlook",
+          "text": "We expect the 2026 bidding environment to be relatively consistent with 2025."
+        },
+        {
+          "speaker": "Scott Montross",
+          "theme": "Data Center Demand",
+          "text": "Data center-related demand contributed to order pipeline growth, particularly in the Precast segment, as company representatives cited multiple active or pending contracts that entail favorable pricing."
+        }
+      ],
+      "key_themes": [
+        "Record annual net sales of $526,000,000, up 6.8% year over year",
+        "Record gross profit of $103,600,000, up 8.6% year over year",
+        "WTS segment revenue of $350,900,000, up 3.8% year over year",
+        "Precast segment revenue of $175,100,000, up 13.3% year over year",
+        "WTS backlog of $346,000,000 at year end 2025",
+        "Q4 2025 strongest bidding quarter of the year",
+        "Earnings of $3.56 per share, free cash flow of $47,100,000",
+        "Data center demand driving Precast order pipeline growth",
+        "Acquisition of Boutin Precast in Colorado for market expansion",
+        "2026 capital allocation focused on Precast expansion and disciplined share repurchases"
+      ],
+      "risks": [
+        "9% decline in WTS production volume due to project content shifts",
+        "Modest rate declines limiting commercial construction activity",
+        "Project timing shifts affecting revenue recognition"
+      ],
+      "tone": "Highly positive with management expressing strong confidence in record performance, robust cash generation, and favorable 2026 outlook driven by sustained demand across both segments and data center-related opportunities.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2026/02/26/nwpx-nwpx-q4-2025-earnings-call-transcript/"
+    },
+    {
+      "quarter": "Q3 2025",
+      "date": "2025-11-05",
+      "speakers": [
+        "Luis von Ahn (CEO)",
+        "Matt Skaruppa (CFO)"
+      ],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": null,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Luis von Ahn",
+          "theme": "AI opportunity and long-term vision",
+          "text": "We believe AI will fundamentally transform education, and we have line of sight to building a product that teaches better than ever before."
+        },
+        {
+          "speaker": "Luis von Ahn",
+          "theme": "DAU growth and social media strategy",
+          "text": "We just posted 36% year-over-year growth for Q3, and we are happy with that. On the positive side, we have things like the Luckin partnership that we talked about in the shareholder letter, which helped us grow users in Asia quite a bit."
+        },
+        {
+          "speaker": "Luis von Ahn",
+          "theme": "Investment strategy shift",
+          "text": "This is why we are investing in the long term. And what that looks like is that we are putting more relative investment in things like teaching better, which, you know, teaching better if we teach better, what that does is that helps user growth, but there's a lag."
+        },
+        {
+          "speaker": "Luis von Ahn",
+          "theme": "Long-term growth opportunity",
+          "text": "If we're able to do an app that teaches just that well, way much better than we have now, we would be talking about billions of users that we have, and that's what we want to shoot for here."
+        },
+        {
+          "speaker": "Luis von Ahn",
+          "theme": "Q4 guidance and deceleration",
+          "text": "In terms of Q4 for DAUs, we expect some amount of deceleration from Q3. But we are pretty happy with where it has stabilized."
+        },
+        {
+          "speaker": "Matt Skaruppa",
+          "theme": "Bookings pressure",
+          "text": "We're gonna have all of the, you know, right now, the math course only has a little bit of content. In the next few months, we're gonna have all of the common core K through 12 content in the math."
+        }
+      ],
+      "key_themes": [
+        "36% year-over-year DAU growth in Q3",
+        "50+ million daily active users",
+        "$1.2 billion bookings guidance with 33% growth",
+        "29% adjusted EBITDA margin",
+        "135 million monthly active users",
+        "Multi-year shift toward long-term user expansion over near-term monetization",
+        "Luckin partnership driving Asia user growth",
+        "Unhinged social media posts strategy impact on DAU",
+        "Guided video calls for beginners coming in 2026",
+        "Full K-12 math content expansion",
+        "Top 9 languages to reach Duolingo score 130 (job-ready)"
+      ],
+      "risks": [
+        "Q4 bookings pressure expected to continue",
+        "DAU growth deceleration into Q4",
+        "Social media engagement volatility affecting user growth",
+        "Long investment timeline before monetization returns"
+      ],
+      "tone": "Optimistic and forward-looking, with management emphasizing long-term AI-driven education opportunity over near-term profitability, while acknowledging short-term pressure on bookings.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2025/11/06/duolingo-duol-q3-2025-earnings-call-transcript/"
+    },
+    {
+      "quarter": "Q2 2025",
+      "date": "2025-07-23",
+      "speakers": [
+        "Sundar Pichai (Chief Executive Officer)",
+        "Philipp Schindler (Chief Business Officer)",
+        "Anat Ashkenazi (Chief Financial Officer)",
+        "Jim Friedland (Director of Communications)"
+      ],
+      "financials": {
+        "revenue_bn": 96.4,
+        "revenue_yoy_pct": 14,
+        "eps_reported": 2.31,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Anat Ashkenazi",
+          "theme": "Operating expenses increase",
+          "text": "Total operating expenses increased 20% to $26.1 billion, driven primarily by a $1.4 billion charge related to a legal settlement and higher R&D expenses."
+        },
+        {
+          "speaker": "Anat Ashkenazi",
+          "theme": "Depreciation margin pressure",
+          "text": "Given the recent increase in CapEx investments, we expect the growth rate in depreciation to accelerate further in Q3 2025, indicating continued margin pressure from higher depreciation expense."
+        },
+        {
+          "speaker": "Anat Ashkenazi",
+          "theme": "Cloud demand environment",
+          "text": "We expect to remain in a tight demand-supply environment going into 2026."
+        },
+        {
+          "speaker": "Philipp Schindler",
+          "theme": "AI advertising performance",
+          "text": "Advertisers that activate AI Max in search campaigns typically see 14% more conversions, and Campaigns using Smart Bidding Exploration see a 19% increase in conversions on average."
+        },
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "AI momentum",
+          "text": "Q2 was a standout quarter for us with robust growth across the company. As you saw at I/O, we are leading at the frontier of AI and shipping at an incredible pace. AI is positively impacting every part of the business, driving strong momentum."
+        }
+      ],
+      "key_themes": [
+        "Consolidated revenue $96.4 billion (+14%)",
+        "Google Cloud revenue $13.6 billion (+32%)",
+        "Operating margin 32.4%",
+        "CapEx guidance raised to $85 billion (+$10 billion)",
+        "Cloud backlog $106 billion (+18% sequential)",
+        "Gemini 980 trillion monthly tokens",
+        "Free cash flow $5.3 billion quarterly"
+      ],
+      "risks": [
+        "$1.4 billion legal settlement charge impacting operating expenses",
+        "Accelerating depreciation pressuring margins",
+        "Tight demand-supply environment for Google Cloud",
+        "Challenging advertising comps from 2024 US election spend",
+        "Elevated CapEx creating infrastructure bottlenecks"
+      ],
+      "tone": "Positive and confident overall tone with management highlighting strong AI-driven growth across Search, Cloud, and subscriptions while acknowledging near-term margin pressures from increased depreciation and legal costs.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2025/07/23/alphabet-googl-q2-2025-earnings-call-transcript/"
+    },
+    {
+      "quarter": "Q1 2025",
+      "date": "2025-05-13",
+      "speakers": [
+        "Keith Tucker (CEO)",
+        "Nelson Haight (CFO)"
+      ],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": null,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Nelson Haight",
+          "theme": "Capital Structure",
+          "text": "We closed the refinancing transaction that lowered our blended interest rate by over 100 basis points, simplified our capital structure and extended our term loan maturities out to 2030."
+        },
+        {
+          "speaker": "Keith Tucker",
+          "theme": "Segment Performance",
+          "text": "Our Inspection & Heat Treating segment generated a 39% year-over-year improvement in adjusted EBITDA, driven by year-over-year revenue growth of nearly 22% in our higher margin heat treating services and 64% from our laboratory testing and inspection services facility in Cincinnati, Ohio."
+        },
+        {
+          "speaker": "Keith Tucker",
+          "theme": "Cost Savings Initiative",
+          "text": "In the first quarter, we kicked off a series of actions targeting further improvement in costs and operating efficiency, that are expected to yield annualized cost savings of around $10 million."
+        },
+        {
+          "speaker": "Keith Tucker",
+          "theme": "Full-Year Guidance",
+          "text": "We remain committed to delivering top-line growth for the full year and at least 15% year-over-year growth in adjusted EBITDA."
+        },
+        {
+          "speaker": "Nelson Haight",
+          "theme": "EBITDA Trend",
+          "text": "Since 2021, we have increased our adjusted EBITDA every year, and we believe that we will continue that trend in 2025."
+        },
+        {
+          "speaker": "Keith Tucker",
+          "theme": "Macroeconomic Risk",
+          "text": "While we continue to closely monitor the potential impact of tariff policies and related effect on our end markets, we've experienced strong activity levels to start the second quarter."
+        }
+      ],
+      "key_themes": [
+        "Refinancing completed March 2025: lowered blended interest rate by 100+ basis points, extended term loan maturities to 2030",
+        "Inspection & Heat Treating segment: 6.8% revenue growth, 39% year-over-year adjusted EBITDA improvement",
+        "Cost discipline: SG&A reduced by ~$2 million vs prior year, targeting $10 million annualized savings",
+        "Revenue essentially flat year-over-year due to seasonal factors and adverse January weather",
+        "Adjusted EBITDA of $5.3 million for Q1 2025",
+        "Canadian operations improvement initiatives launched"
+      ],
+      "risks": [
+        "Tariff policies and related effects on end markets",
+        "Adverse weather impacts in January affecting customer activity levels",
+        "Delays in project and turnaround activity shifting revenue to future periods",
+        "Operational delays in Mechanical Service segment"
+      ],
+      "tone": "Optimistic and confident tone with management highlighting successful refinancing, strong segment performance, and ongoing cost discipline while acknowledging macroeconomic uncertainty from tariff policies.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2026/03/17/team-tisi-q1-2025-earnings-call-transcript/"
+    },
+    {
+      "quarter": "Q4 2024",
+      "date": "2025-02-04",
+      "speakers": [
+        "Jim Friedland (Senior Director, Investor Relations)",
+        "Sundar Pichai (Chief Executive Officer)",
+        "Philipp Schindler (Chief Business Officer)",
+        "Anat Ashkenazi (Chief Financial Officer)"
+      ],
+      "financials": {
+        "revenue_bn": 96.5,
+        "revenue_yoy_pct": 12,
+        "eps_reported": 2.15,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "AI Leadership",
+          "text": "We delivered another strong quarter in Q4, driven by our leadership in AI and our unique full stack approach."
+        },
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "Cloud/YouTube Revenue",
+          "text": "In cloud and YouTube, we said at the beginning of 2024 that we expected to exit the year at a combined annual revenue run rate of over $100 billion. We met that goal and ended the year at a run rate of $110 billion."
+        },
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "Data Center Efficiency",
+          "text": "Google data centers deliver nearly four times more computing power per unit of electricity compared to just five years ago."
+        },
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "Gemini Developer Adoption",
+          "text": "That's why more than 4.4 million developers are using our Gemini models today, double the number from just six months ago."
+        },
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "Search Innovation",
+          "text": "As AI continues to expand the universe of queries that people can ask, 2025 is going to be one of the biggest years for Search innovation yet."
+        },
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "Circle to Search Adoption",
+          "text": "Circle to Search is now available on over 200 million Android devices."
+        }
+      ],
+      "key_themes": [
+        "AI full stack leadership driving strong Q4 results",
+        "Cloud + YouTube combined annual revenue run rate of $110 billion (exceeded $100B target)",
+        "Gemini 2.0 launch for agentic era with Flash model",
+        "4.4 million Gemini developers (doubled from 6 months ago)",
+        "AI Overviews available in 100+ countries",
+        "Data center efficiency: 4x computing power per unit electricity vs 5 years ago",
+        "Circle to Search on 200M+ Android devices",
+        "Quantum computing breakthrough with Willow chip"
+      ],
+      "risks": [
+        "Forward-looking statements subject to risks and uncertainties",
+        "Actual results could differ materially from expectations"
+      ],
+      "tone": "Highly positive with strong emphasis on AI leadership, exceeding cloud/YouTube revenue targets, and robust product momentum across Search, Cloud, and developer platforms.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2025/02/05/alphabet-goog-q4-2024-earnings-call-transcript/"
+    },
+    {
+      "quarter": "Q3 2024",
+      "date": "2024-10-23",
+      "speakers": [
+        "William McDermott (CEO)"
+      ],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": null,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "William McDermott",
+          "theme": "Execution Performance",
+          "text": "Many companies have struggled to execute in what has been a complex macro environment. ServiceNow has delivered consistently beyond the Rule of 50. We are the benchmark for elite level execution."
+        },
+        {
+          "speaker": "William McDermott",
+          "theme": "AI Platform Positioning",
+          "text": "ServiceNow has emerged as the AI platform for business transformation."
+        },
+        {
+          "speaker": "William McDermott",
+          "theme": "Agentic AI Strategy",
+          "text": "We intend to be the control point that governs the deployment of Agentic AI across enterprise."
+        },
+        {
+          "speaker": "William McDermott",
+          "theme": "Now Assist Growth",
+          "text": "With Now Assist we have 44 customers spending more than $1 million in ACV, including six over $5 million and two over $10 million, and this continues to be our fastest-growing product ever and an accelerant to our cross-enterprise expansion."
+        },
+        {
+          "speaker": "William McDermott",
+          "theme": "Platform Strategy",
+          "text": "Organizations around the world needed a platform to help them clean up that mess, so they can modernize for the AI world, ServiceNow is that chosen strategic platform."
+        },
+        {
+          "speaker": "William McDermott",
+          "theme": "AI Market Opportunity",
+          "text": "When you combine a massive once-in-a-generation technological shift with a platform that is engineered to lead the transformation ServiceNow's momentum is the result."
+        }
+      ],
+      "key_themes": [
+        "Subscription revenue growth of 22.5% at constant currency (200 bps above guidance)",
+        "cRPO growth of 23.5% at constant currency (150 bps above guidance)",
+        "Operating margin over 31% (150 bps above guidance)",
+        "96 deals greater than $1 million in net new ACV",
+        "Second largest new logo deal ever and second customer crossed $100 million in total ACV",
+        "Now Assist fastest-growing product with 44 customers at $1M+ ACV",
+        "Xanadu gen AI release with 350+ net new innovations",
+        "Agentic AI deployment strategy",
+        "Strategic relevance as AI governance control tower"
+      ],
+      "risks": [
+        "Risk that every vendor's bots and agents will scatter without governance control",
+        "Complex macro environment for enterprise execution"
+      ],
+      "tone": "Highly confident and bullish, with management emphasizing elite execution, strong financial outperformance, and leadership positioning in the AI platform transformation opportunity.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2026/04/22/servicenow-now-q3-2024-earnings-transcript/?referring_guid=a0ef584f-a933-4d6e-844b-6bd0f5be99ff"
+    },
+    {
+      "quarter": "Q2 2024",
+      "date": "2024-07-23",
+      "speakers": [
+        "Sundar Pichai (Chief Executive Officer)",
+        "Philipp Schindler (Chief Business Officer)",
+        "Ruth Porat (Chief Financial Officer)",
+        "Jim Friedland (Director, Investor Relations)"
+      ],
+      "financials": {
+        "revenue_bn": 84.7,
+        "revenue_yoy_pct": 14,
+        "eps_reported": 1.89,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "Cloud Revenue Milestone",
+          "text": "In Q2, cloud reached some major milestones. Quarterly revenues crossed the $10 billion mark for the first time, at the same time passed the $1 billion mark in quarterly operating profit."
+        },
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "AI Revenue Growth",
+          "text": "Year-to-date, our AI infrastructure and generative AI solutions for cloud customers have already generated billions in revenues and are being used by more than 2 million developers."
+        },
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "AI Overviews Engagement",
+          "text": "We are pleased to see the positive trends from our testing continue as we roll out AI Overviews, including increases in Search usage and increased user satisfaction with the results."
+        },
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "Gemini Developer Adoption",
+          "text": "More than 1.5 million developers are now using Gemini across our developer tools, and we recently unveiled new models that are more capable and efficient than ever."
+        },
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "AI Product Integration",
+          "text": "All six of our products with more than 2 billion monthly users now use Gemini. This means that Google is the company that's truly bringing AI to everyone."
+        },
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "Trillium TPU Performance",
+          "text": "Trillium is the sixth generation of our custom AI accelerator, and it's our best-performing and most energy-efficient TPU to date. It achieves a near 5x increase in peak compute performance per chip and a 67% more energy efficient compared to TPU v5e."
+        }
+      ],
+      "key_themes": [
+        "Cloud quarterly revenue exceeding $10B for first time",
+        "Cloud quarterly operating profit exceeding $1B",
+        "AI Overviews showing positive trends with increased Search usage and user satisfaction",
+        "Gemini model family with 2 million token context window",
+        "Trillium TPU with 5x peak compute performance improvement",
+        "Developer adoption: 2M+ developers using Gemini",
+        "Younger users (18-24) showing higher engagement with AI Overviews",
+        "Measured approach to real estate investments for hybrid workforce"
+      ],
+      "risks": [
+        "Forward-looking statements subject to risks and uncertainties",
+        "Actual results could differ materially from expectations"
+      ],
+      "tone": "Highly positive with strong emphasis on AI momentum, cloud growth milestones, and confidence in long-term AI leadership positioning.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2024/07/23/alphabet-googl-q2-2024-earnings-call-transcript/"
+    }
+  ]
+}

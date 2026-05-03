@@ -1,0 +1,243 @@
+{
+  "company": "Alphabet Inc.",
+  "ticker": "GOOG",
+  "sector": "Communication Services",
+  "industry": "Internet Content & Information",
+  "last_updated": "2026-04-24",
+  "fetcher": {
+    "tier": 1,
+    "method": "duckduckgo_search + llm_extraction",
+    "model": "deepseek-chat",
+    "note": "Data sourced from news article snippets. Quotes may be paraphrased. Verify financials against official IR filings before use in IC memos."
+  },
+  "transcripts": [
+    {
+      "quarter": "Q1 2026",
+      "date": null,
+      "speakers": [],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": null,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "data_quality": "low"
+    },
+    {
+      "quarter": "Q4 2025",
+      "date": null,
+      "speakers": [],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": null,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "No transcript or call details available for Q4 2025.",
+      "data_quality": "low"
+    },
+    {
+      "quarter": "Q3 2025",
+      "date": null,
+      "speakers": [],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": null,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "The snippets indicate a positive tone, highlighting double-digit growth and momentum from generative AI adoption, but no direct quotes from the call are provided.",
+      "data_quality": "low"
+    },
+    {
+      "quarter": "Q2 2025",
+      "date": "2025-07-23",
+      "speakers": [
+        "Anat Ashkenazi (Senior VP & CFO)",
+        "James Friedland (unknown)"
+      ],
+      "financials": {
+        "revenue_bn": 96.4,
+        "revenue_yoy_pct": 14,
+        "eps_reported": 2.31,
+        "eps_estimate": 2.69
+      },
+      "key_quotes": [
+        {
+          "speaker": "Anat Ashkenazi",
+          "theme": "Cloud capacity constraints",
+          "text": "We expect to remain in a tight demand-supply environment going into 2026."
+        }
+      ],
+      "key_themes": [
+        "Strong AI and cloud growth",
+        "Double-digit revenue growth in Search and YouTube",
+        "Google Cloud revenue surged 32% YoY",
+        "Operating margin expanded to 20.7%",
+        "Full-year CapEx guidance raised to $85B"
+      ],
+      "risks": [
+        "Margin pressure from competition",
+        "Challenging advertising comps due to strong 2024 US election spending",
+        "Ongoing capacity constraints for Google Cloud"
+      ],
+      "tone": "The call tone was positive, highlighting robust growth and AI momentum, while acknowledging upcoming challenges from comps and capacity constraints.",
+      "data_quality": "medium"
+    },
+    {
+      "quarter": "Q1 2025",
+      "date": "2025-04-24",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 90.2,
+        "revenue_yoy_pct": 12,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [],
+      "key_themes": [
+        "AI and Cloud growth",
+        "Gemini 2.5 model integration"
+      ],
+      "risks": [],
+      "tone": "The snippets indicate a positive earnings report, highlighting strong revenue growth driven by AI and cloud.",
+      "data_quality": "medium"
+    },
+    {
+      "quarter": "Q4 2024",
+      "date": null,
+      "speakers": [],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": null,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "No transcript content available for Alphabet Inc. Q4 2024 earnings call.",
+      "data_quality": "low"
+    },
+    {
+      "quarter": "Q3 2024",
+      "date": "2024-10-29",
+      "speakers": [
+        "Jim Friedland (Senior Director, Investor Relations)",
+        "Sundar Pichai (CEO)"
+      ],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": 15,
+        "eps_reported": null,
+        "eps_estimate": 2.69
+      },
+      "key_quotes": [
+        {
+          "speaker": "Sundar Pichai",
+          "theme": "AI integration",
+          "text": "Today, all seven of our products and platforms with more than 2 billion monthly users use Gemini models. That includes the latest product to surpass the 2 billion user milestone, Google Maps."
+        }
+      ],
+      "key_themes": [
+        "AI and cloud growth",
+        "Gemini model adoption",
+        "Google Maps reaching 2 billion users"
+      ],
+      "risks": [
+        "margin pressure",
+        "competition"
+      ],
+      "tone": "The call tone is positive, highlighting strong revenue growth and AI advancements.",
+      "data_quality": "medium"
+    },
+    {
+      "quarter": "Q2 2024",
+      "date": null,
+      "speakers": [],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": null,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "data_quality": "low"
+    }
+  ],
+  "news": [
+    {
+      "date": null,
+      "source": "Wikipedia",
+      "headline": "Alphabet Inc. - Wikipedia",
+      "snippet": "Alphabet Inc. is an American multinational technology conglomerate holding company headquartered in Mountain View, California, created through a restructuring of Google on October 2, 2015.",
+      "tags": [
+        "company profile",
+        "history"
+      ]
+    },
+    {
+      "date": null,
+      "source": "Investing.com",
+      "headline": "Alphabet Inc. (Google) Stock | GOOGL - Investing.com",
+      "snippet": "Alphabet Inc. offers various products and platforms globally, operating through Google Services, Google Cloud, and Other Bets segments.",
+      "tags": [
+        "stock",
+        "company profile"
+      ]
+    },
+    {
+      "date": null,
+      "source": "Yahoo Finance",
+      "headline": "Alphabet Inc. (GOOG) Stock Price, News, Quote... - Yahoo Finance",
+      "snippet": "Find the latest Alphabet Inc. (GOOG) stock quote, history, news and other vital information.",
+      "tags": [
+        "stock",
+        "news"
+      ]
+    },
+    {
+      "date": null,
+      "source": "TradingView",
+      "headline": "GOOG Stock Price and Chart \u2014 NASDAQ:GOOG \u2014 TradingView",
+      "snippet": "View live Alphabet Inc (Google) Class C chart to track its stock's price action, find market predictions, financials and market news.",
+      "tags": [
+        "stock",
+        "chart"
+      ]
+    },
+    {
+      "date": "2026-04-01",
+      "source": "CompaniesMarketCap",
+      "headline": "Alphabet (Google) (GOOG) - Market capitalization",
+      "snippet": "As of April 2026 Alphabet (Google) has a market cap of $4.105 Trillion USD, making it the world's 2nd most valuable company.",
+      "tags": [
+        "market cap",
+        "valuation"
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "source": "StockAnalysis",
+      "headline": "Alphabet (GOOGL) Market Cap & Net Worth",
+      "snippet": "Alphabet has a market cap or net worth of $3.84 trillion as of April 10, 2026, increased by 84.58% in one year.",
+      "tags": [
+        "market cap",
+        "growth"
+      ]
+    }
+  ]
+}

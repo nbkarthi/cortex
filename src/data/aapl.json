@@ -1,0 +1,179 @@
+{
+  "company": "Apple Inc.",
+  "ticker": "AAPL",
+  "sector": "Electronic Computers",
+  "last_updated": "2026-04-23",
+  "annual_filings": [
+    {
+      "form": "10-K",
+      "filing_date": "2023-11-03",
+      "period_end": "2023-09-30",
+      "financials": {
+        "revenue_bn": 383.3,
+        "eps_diluted": 6.13,
+        "net_income_bn": 97.0
+      }
+    },
+    {
+      "form": "10-K",
+      "filing_date": "2024-11-01",
+      "period_end": "2024-09-28",
+      "financials": {
+        "revenue_bn": 391.0,
+        "eps_diluted": 6.08,
+        "net_income_bn": 93.7
+      }
+    },
+    {
+      "form": "10-K",
+      "filing_date": "2025-10-31",
+      "period_end": "2025-09-27",
+      "financials": {
+        "revenue_bn": 416.2,
+        "eps_diluted": 7.46,
+        "net_income_bn": 112.0
+      }
+    }
+  ],
+  "transcripts": [
+    {
+      "quarter": "Q4 2024",
+      "fiscal_year": "2024",
+      "date": "2025-01-31",
+      "period_end": "2024-12-28",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 124.3,
+        "eps_reported": 2.4,
+        "net_income_bn": 36.3
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    },
+    {
+      "quarter": "Q1 2025",
+      "fiscal_year": "2025",
+      "date": "2025-05-02",
+      "period_end": "2025-03-29",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 95.4,
+        "eps_reported": 1.65,
+        "net_income_bn": 24.8
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    },
+    {
+      "quarter": "Q2 2025",
+      "fiscal_year": "2025",
+      "date": "2025-08-01",
+      "period_end": "2025-06-28",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 94.0,
+        "eps_reported": 1.57,
+        "net_income_bn": 23.4
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    },
+    {
+      "quarter": "Q4 2025",
+      "fiscal_year": "2025",
+      "date": "2026-01-30",
+      "period_end": "2025-12-27",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 143.8,
+        "eps_reported": 2.84,
+        "net_income_bn": 42.1
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-04-20",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "Apple Inc.: Departure/Election of Directors or Officers",
+      "snippet": "8-K filed on 2026-04-20. Items: 5.02.",
+      "tags": [
+        "5.02",
+        "8-K",
+        "SEC Filing"
+      ]
+    },
+    {
+      "date": "2026-02-24",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "Apple Inc.: Submission of Matters to a Vote of Security Holders, Financial Statements and Exhibits",
+      "snippet": "8-K filed on 2026-02-24. Items: 5.07,9.01.",
+      "tags": [
+        "5.07",
+        "9.01",
+        "8-K",
+        "SEC Filing"
+      ]
+    },
+    {
+      "date": "2026-01-29",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "Apple Inc.: Results of Operations and Financial Condition, Financial Statements and Exhibits",
+      "snippet": "8-K filed on 2026-01-29. Items: 2.02,9.01.",
+      "tags": [
+        "2.02",
+        "9.01",
+        "8-K",
+        "SEC Filing"
+      ]
+    },
+    {
+      "date": "2026-01-02",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "Apple Inc.: Departure/Election of Directors or Officers",
+      "snippet": "8-K filed on 2026-01-02. Items: 5.02.",
+      "tags": [
+        "5.02",
+        "8-K",
+        "SEC Filing"
+      ]
+    },
+    {
+      "date": "2025-12-05",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "Apple Inc.: Departure/Election of Directors or Officers",
+      "snippet": "8-K filed on 2025-12-05. Items: 5.02.",
+      "tags": [
+        "5.02",
+        "8-K",
+        "SEC Filing"
+      ]
+    },
+    {
+      "date": "2025-10-30",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "Apple Inc.: Results of Operations and Financial Condition, Financial Statements and Exhibits",
+      "snippet": "8-K filed on 2025-10-30. Items: 2.02,9.01.",
+      "tags": [
+        "2.02",
+        "9.01",
+        "8-K",
+        "SEC Filing"
+      ]
+    }
+  ]
+}

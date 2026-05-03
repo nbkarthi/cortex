@@ -1,0 +1,247 @@
+{
+  "company": "MICROSOFT CORP",
+  "ticker": "MSFT",
+  "sector": "Services-Prepackaged Software",
+  "last_updated": "2026-04-23",
+  "annual_filings": [
+    {
+      "form": "10-K",
+      "filing_date": "2023-07-27",
+      "period_end": "2023-06-30",
+      "financials": {
+        "revenue_bn": 211.9,
+        "net_income_bn": 72.4
+      }
+    },
+    {
+      "form": "10-K",
+      "filing_date": "2024-07-30",
+      "period_end": "2024-06-30",
+      "financials": {
+        "revenue_bn": 245.1,
+        "net_income_bn": 88.1
+      }
+    },
+    {
+      "form": "10-K",
+      "filing_date": "2025-07-30",
+      "period_end": "2025-06-30",
+      "financials": {
+        "revenue_bn": 281.7,
+        "net_income_bn": 101.8
+      }
+    }
+  ],
+  "transcripts": [
+    {
+      "quarter": "Q3 2023",
+      "fiscal_year": "2023",
+      "date": "2023-10-24",
+      "period_end": "2023-09-30",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 56.5,
+        "eps_reported": null,
+        "net_income_bn": 22.3
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    },
+    {
+      "quarter": "Q4 2023",
+      "fiscal_year": "2023",
+      "date": "2024-01-30",
+      "period_end": "2023-12-31",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 62.0,
+        "eps_reported": null,
+        "net_income_bn": 21.9
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    },
+    {
+      "quarter": "Q1 2024",
+      "fiscal_year": "2024",
+      "date": "2024-04-25",
+      "period_end": "2024-03-31",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 61.9,
+        "eps_reported": null,
+        "net_income_bn": 21.9
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    },
+    {
+      "quarter": "Q3 2024",
+      "fiscal_year": "2024",
+      "date": "2024-10-30",
+      "period_end": "2024-09-30",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 65.6,
+        "eps_reported": null,
+        "net_income_bn": 24.7
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    },
+    {
+      "quarter": "Q4 2024",
+      "fiscal_year": "2024",
+      "date": "2025-01-29",
+      "period_end": "2024-12-31",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 69.6,
+        "eps_reported": null,
+        "net_income_bn": 24.1
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    },
+    {
+      "quarter": "Q1 2025",
+      "fiscal_year": "2025",
+      "date": "2025-04-30",
+      "period_end": "2025-03-31",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 70.1,
+        "eps_reported": null,
+        "net_income_bn": 25.8
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    },
+    {
+      "quarter": "Q3 2025",
+      "fiscal_year": "2025",
+      "date": "2025-10-29",
+      "period_end": "2025-09-30",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 77.7,
+        "eps_reported": null,
+        "net_income_bn": 27.7
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    },
+    {
+      "quarter": "Q4 2025",
+      "fiscal_year": "2025",
+      "date": "2026-01-28",
+      "period_end": "2025-12-31",
+      "speakers": [],
+      "financials": {
+        "revenue_bn": 81.3,
+        "eps_reported": null,
+        "net_income_bn": 38.5
+      },
+      "key_quotes": [],
+      "key_themes": [],
+      "risks": [],
+      "tone": "",
+      "source": "SEC 10-Q"
+    }
+  ],
+  "news": [
+    {
+      "date": "2026-01-28",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "MICROSOFT CORP: Results of Operations and Financial Condition, Financial Statements and Exhibits",
+      "snippet": "8-K filed on 2026-01-28. Items: 2.02,9.01.",
+      "tags": [
+        "2.02",
+        "9.01",
+        "8-K",
+        "SEC Filing"
+      ]
+    },
+    {
+      "date": "2025-12-08",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "MICROSOFT CORP: Departure/Election of Directors or Officers, Submission of Matters to a Vote of Security Holders",
+      "snippet": "8-K filed on 2025-12-08. Items: 5.02,5.07.",
+      "tags": [
+        "5.02",
+        "5.07",
+        "8-K",
+        "SEC Filing"
+      ]
+    },
+    {
+      "date": "2025-10-29",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "MICROSOFT CORP: Results of Operations and Financial Condition, Regulation FD Disclosure, Financial Statements and Exhibits",
+      "snippet": "8-K filed on 2025-10-29. Items: 2.02,7.01,9.01.",
+      "tags": [
+        "2.02",
+        "7.01",
+        "9.01",
+        "8-K",
+        "SEC Filing"
+      ]
+    },
+    {
+      "date": "2025-09-30",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "MICROSOFT CORP: Departure/Election of Directors or Officers",
+      "snippet": "8-K filed on 2025-09-30. Items: 5.02.",
+      "tags": [
+        "5.02",
+        "8-K",
+        "SEC Filing"
+      ]
+    },
+    {
+      "date": "2025-07-30",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "MICROSOFT CORP: Results of Operations and Financial Condition, Financial Statements and Exhibits",
+      "snippet": "8-K filed on 2025-07-30. Items: 2.02,9.01.",
+      "tags": [
+        "2.02",
+        "9.01",
+        "8-K",
+        "SEC Filing"
+      ]
+    },
+    {
+      "date": "2025-07-01",
+      "source": "SEC EDGAR (8-K)",
+      "headline": "MICROSOFT CORP: Amendments to Articles or Bylaws, Financial Statements and Exhibits",
+      "snippet": "8-K filed on 2025-07-01. Items: 5.03,9.01.",
+      "tags": [
+        "5.03",
+        "9.01",
+        "8-K",
+        "SEC Filing"
+      ]
+    }
+  ]
+}

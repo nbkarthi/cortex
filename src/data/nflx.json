@@ -1,0 +1,384 @@
+{
+  "company": "Netflix, Inc.",
+  "ticker": "NFLX",
+  "sector": "Communication Services",
+  "last_updated": "2026-04-24",
+  "transcripts": [
+    {
+      "quarter": "Q4 2025",
+      "date": "2026-03-02",
+      "speakers": [
+        "Jerry Wang (Co-Founder and CEO)",
+        "Alex Yang (Co-Founder and CFO)"
+      ],
+      "financials": {
+        "revenue_bn": 0.32,
+        "revenue_yoy_pct": 7.8,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Jerry Wang",
+          "theme": "AI Integration Strategy",
+          "text": "AI is evolving from a mere overlay of discrete features into fully deployable operational applications. As AI evolves from a conversational tool into an intelligent agent capable of engaging in real-world operations, industry expectations for underlying system stability, real-time responsiveness, and scalability are increasing significantly."
+        },
+        {
+          "speaker": "Alex Yang",
+          "theme": "Record Non-GAAP Net Income",
+          "text": "Full-year non-GAAP net income reached a record high of $80.1 million, up approximately $4.7 million compared with 2024."
+        },
+        {
+          "speaker": "Alex Yang",
+          "theme": "SaaS Recurring Revenue Growth",
+          "text": "Of this total, recurring services revenues rose by 37% year over year, emerging as a key growth driver of SaaS. We are looking forward to enlarging this segment faster with this recurring model."
+        },
+        {
+          "speaker": "Alex Yang",
+          "theme": "Margin Expansion",
+          "text": "Non-GAAP operating margin reached 10.5%, an increase of 2.9 percentage points year over year, while non-GAAP net margin rose to 24.9%."
+        },
+        {
+          "speaker": "Jerry Wang",
+          "theme": "AI Revenue Contribution",
+          "text": "The impact of AI extends beyond enhancing product experiences. It is also reshaping application architecture and transforming modes of ecosystem collaboration."
+        },
+        {
+          "speaker": "Alex Yang",
+          "theme": "Strong Cash Position",
+          "text": "At the end of 2025, our total cash and cash equivalents amounted to over $1 billion, precisely $1,017 million."
+        }
+      ],
+      "key_themes": [
+        "Q4 2025 revenue: ~$48.5 million (+3% YoY); Full-year 2025 revenue: ~$322 million (+7.8% YoY)",
+        "Non-GAAP operating margin: 11.1% in Q4, 10.5% full-year (+2.9 percentage points YoY)",
+        "Non-GAAP net margin: 24.4% in Q4, 24.9% full-year",
+        "PaaS business revenue: ~$230 million (+6.5% YoY); PaaS premium customers: 291",
+        "SaaS and Others revenue: $44.8 million (+13.4% YoY)",
+        "Smart Solution revenue: $45.7 million (+8.9% YoY)",
+        "Recurring services revenues: +37% YoY",
+        "Cash and equivalents: $1,017 million",
+        "11th consecutive quarter of positive operating cash flow",
+        "10th consecutive quarter of YoY revenue growth"
+      ],
+      "risks": [
+        "Continuous cautious industry demand",
+        "More conservative customer procurement cycles",
+        "Extended customer budgeting cycles",
+        "Evolving global uncertainties",
+        "Geopolitical and macroeconomic dynamics"
+      ],
+      "tone": "Optimistic and confident, with management highlighting AI-driven growth, margin expansion, record profitability, and strong cash position despite cautious industry demand.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2026/03/02/tuya-tuya-q4-2025-earnings-call-transcript/"
+    },
+    {
+      "quarter": "Q2 2025",
+      "date": "2025-07-29",
+      "speakers": [
+        "David Hult (President and Chief Executive Officer)",
+        "Dan Clara (Chief Operating Officer)",
+        "Michael Welch (Senior Vice President and Chief Financial Officer)"
+      ],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": null,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Dan Clara",
+          "theme": "Inventory Management",
+          "text": "Same-store new day supply was fifty-nine days at the end of June"
+        },
+        {
+          "speaker": "David Hult",
+          "theme": "Margin Normalization",
+          "text": "we still see those metrics trending back towards the $2,500 to $3,000 range over time (as discussed on the earnings call)"
+        },
+        {
+          "speaker": "Michael Welch",
+          "theme": "Tariff Impact",
+          "text": "labor is the biggest component of that. And so it would have a small impact on the claims, but not a huge impact"
+        },
+        {
+          "speaker": "Michael Welch",
+          "theme": "Leverage Target",
+          "text": "over the next twelve to eighteen months as we work to integrate the acquisition and focus on our migration to Techeon"
+        }
+      ],
+      "key_themes": [
+        "Revenue of $4.4 billion with 9% new vehicle same-store revenue growth",
+        "Gross profit of $752 million (17.2% margin)",
+        "Adjusted EPS of $7.43",
+        "Adjusted EBITDA of $256 million",
+        "F&I PVR of $2,096",
+        "Used vehicle volume down 4% YoY, used GPU at $1,729",
+        "Herb Chambers acquisition closed July 21, 2025 ($750M Blue Sky, $610M real estate)",
+        "Net leverage ratio of 2.46x, targeting return below target range by mid-late 2026",
+        "Nine stores divested generating $252M net proceeds for debt reduction",
+        "CapEx of $60M YTD, projected ~$250M in 2025 and 2026",
+        "Liquidity of $1.1 billion",
+        "Clicklane digital retail: 9,500+ sales, 46% new units",
+        "TCA generated $7M pretax income with $11M non-cash deferral impact"
+      ],
+      "risks": [
+        "Tariff-related uncertainty impacting CapEx projections and TCA deferral timing",
+        "Leverage temporarily exceeding target range post-acquisition",
+        "Used vehicle supply constraints",
+        "Techeon platform migration costs through 2027"
+      ],
+      "tone": "Constructive tone with focus on profitability over volume, disciplined cost control, and integration of the Herb Chambers acquisition while managing leverage and tariff uncertainties.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2025/08/05/asbury-abg-q2-2025-earnings-call-transcript/"
+    },
+    {
+      "quarter": "Q1 2025",
+      "date": "2025-04-17",
+      "speakers": [
+        "Spencer Wang (VP of Finance, IR, and Corporate Development)",
+        "Ted Sarandos (Co-CEO)",
+        "Greg Peters (Co-CEO)",
+        "Spence Neumann (CFO)"
+      ],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": null,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Greg Peters",
+          "theme": "Gaming Strategy",
+          "text": "We have always said that we were in this to win. We want to invest enough to ensure that we are playing to win. But we also are coming knowing that we have got a lot to learn."
+        },
+        {
+          "speaker": "Ted Sarandos",
+          "theme": "Internal Goals Response",
+          "text": "We often have internal meetings, and we talk about long-term aspirations. But it is important to note that this is not the same as forecast. Our operating plans are the same as our external forecasting guidance. We do not have a five-year forecast or five-year guidance."
+        },
+        {
+          "speaker": "Greg Peters",
+          "theme": "Growth Potential",
+          "text": "We think we have a pretty good business today, you know, over $40 billion in revenue. We have got over 300 million paid households. Those represent an audience of over 700 million individuals. We are leading in streaming view share, but we also think that we are a minority of our addressable market."
+        },
+        {
+          "speaker": "Greg Peters",
+          "theme": "Consumer Resilience",
+          "text": "Entertainment historically has been pretty resilient in tougher economic times. Netflix specifically also has been generally quite resilient, and we have not seen any major impacts during those tougher times."
+        },
+        {
+          "speaker": "Ted Sarandos",
+          "theme": "Value Proposition",
+          "text": "Historically, in tougher economies, home entertainment value is really important to consumer households. And Netflix is a tremendous value in absolute terms and certainly in competitive terms."
+        }
+      ],
+      "key_themes": [
+        "Revenue over $40B with 300M+ paid households representing 700M+ individuals",
+        "Less than 10% of TV hours captured, indicating significant growth runway",
+        "Ad-supported tier providing resilience at $7.99 US/Canada starting price",
+        "Proprietary ad tech platform rollout in Canada and US enabling enhanced targeting",
+        "AI tools improving production efficiency and visual effects",
+        "IP-based gaming initiatives with measured investment tied to member value",
+        "International content commitments: $1B Mexico, $2.5B Korea"
+      ],
+      "risks": [
+        "Economic uncertainty and potential recession impact on consumer spending",
+        "International regulatory and tax exposure across 50 countries",
+        "Content performance variability and audience measurement challenges"
+      ],
+      "tone": "Confident and growth-oriented, with management addressing leaked internal targets while emphasizing strong fundamentals, resilient consumer metrics, and substantial untapped market opportunity.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2025/04/21/netflix-nflx-q1-2025-earnings-call/"
+    },
+    {
+      "quarter": "Q4 2024",
+      "date": "2025-01-21",
+      "speakers": [
+        "Spencer Wang (Vice President, Finance, Investor Relations, and Corporate Development)",
+        "Theodore A. Sarandos (Co-Chief Executive Officer)",
+        "Gregory K. Peters (Co-Chief Executive Officer)",
+        "Spence Neumann (Chief Financial Officer)"
+      ],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": null,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Theodore A. Sarandos",
+          "theme": "LA Wildfires Impact",
+          "text": "To your question directly, no meaningful delays in the delivery of the projects and no meaningful impact to the cash in 2025, but very meaningful disruption in people's lives."
+        },
+        {
+          "speaker": "Gregory K. Peters",
+          "theme": "Subscriber Growth Drivers",
+          "text": "We've seen broad strength across content categories, across all regions. We've seen it throughout the entire year. And as we've consistently seen across our history, no single title really drives a majority of our acquisition or engagement."
+        },
+        {
+          "speaker": "Theodore A. Sarandos",
+          "theme": "Event Retention",
+          "text": "What's really been most encouraging is that the retention behavior of those folks who did come in for those events look a lot like the folks who come in for all of our other big titles."
+        },
+        {
+          "speaker": "Spence Neumann",
+          "theme": "FX Hedging Strategy",
+          "text": "Roughly 60% of our revenue is in non-U.S. dollar currencies. And think of it as the way we look at it is of that amount, we try to hedge roughly 50% on a rolling forward 12-month basis."
+        },
+        {
+          "speaker": "Gregory K. Peters",
+          "theme": "Ads Plan Growth",
+          "text": "Q4 ads plan represented over 55% of signups across our ads countries. We've seen membership on those ads plan increase about 30% quarter over quarter."
+        },
+        {
+          "speaker": "Gregory K. Peters",
+          "theme": "Ads Engagement",
+          "text": "View hours per member on the ads plan is similar to engagement on our standard nonads plan in our ads country, which is a really good marker that we're excited about."
+        }
+      ],
+      "key_themes": [
+        "LA wildfires causing no meaningful impact on 2025 cash content spending or delivery schedules",
+        "Subscriber additions of 19 million driven by broad content slate, not single titles",
+        "Live events (Jake Paul fight, NFL Christmas Day games) showing strong retention behavior similar to other content",
+        "Ads plan growing rapidly: 55% of signups in ads countries, 30% QoQ membership growth",
+        "Ads plan engagement metrics healthy with view hours similar to standard plan",
+        "FX hedging covering ~50% of non-USD revenue on rolling 12-month basis",
+        "Strong execution across product, pricing, marketing, and advertising teams"
+      ],
+      "risks": [
+        "FX volatility impacting margins when dollar strengthens",
+        "Potential for further disruption to LA-based productions from wildfires",
+        "Hedging viewed as short- to medium-term solution only"
+      ],
+      "tone": "Optimistic and confident tone with management highlighting strong Q4 performance across content, subscriber growth, and advertising monetization while addressing near-term headwinds from wildfires and currency volatility.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2025/01/21/netflix-nflx-q4-2024-earnings-call-transcript/"
+    },
+    {
+      "quarter": "Q3 2024",
+      "date": "2024-11-07",
+      "speakers": [
+        "Jean-Christophe Flatin (Chief Operating Officer)",
+        "Daniel Ordonez (Chief Financial Officer)"
+      ],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": 10.9,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Jean-Christophe Flatin",
+          "theme": "Profitable Growth Milestone",
+          "text": "I am pleased to report that each of our three operating segments drove profitable growth in the quarter. This is a significant milestone as we continue to drive the total business towards structural, consistent profitable growth."
+        },
+        {
+          "speaker": "Jean-Christophe Flatin",
+          "theme": "Volume Growth Acceleration",
+          "text": "Our volume growth has accelerated to 13% year-over-year growth with each region reporting solid growth this quarter."
+        },
+        {
+          "speaker": "Jean-Christophe Flatin",
+          "theme": "Gross Margin Improvement",
+          "text": "Our first quarter gross margin is a full 27 percentage points higher than it was just two years ago."
+        },
+        {
+          "speaker": "Jean-Christophe Flatin",
+          "theme": "Revenue Guidance Refinement",
+          "text": "We now expect constant currency revenue growth to be near or slightly below the low end of our previously provided range of 6% to 10%."
+        },
+        {
+          "speaker": "Daniel Ordonez",
+          "theme": "Europe Segment Performance",
+          "text": "This segment reported solid results in the quarter with 6% revenue growth or 4% on a constant currency basis. This revenue growth drove 46% year-on-year increase in adjusted EBITDA as we captured the benefits of fixed cost absorption and drove efficiencies in both cost of goods and SG&A while also increasing advertising investments year-on-year."
+        },
+        {
+          "speaker": "Jean-Christophe Flatin",
+          "theme": "Business Strengthening",
+          "text": "While we are pleased that we have driven improvements in our profitability, we are proud that we have driven those results in a healthy way that has strengthened our business."
+        }
+      ],
+      "key_themes": [
+        "Fifth consecutive quarter of sequentially improving adjusted EBITDA",
+        "Q3 adjusted EBITDA loss of just $5 million",
+        "Constant currency revenue growth accelerated to nearly 10% year-over-year",
+        "Volume-led growth across all segments",
+        "Capital expenditure guidance below $55 million (below prior expectation of below $70 million)",
+        "SG&A cost savings program largely complete",
+        "U.S. and U.K. manufacturing facility exits on track"
+      ],
+      "risks": [
+        "Category sluggishness, particularly in the U.K.",
+        "Revenue guidance refined downward reflecting recent category sluggishness",
+        "Ongoing restructuring efforts",
+        "Need to realize full potential"
+      ],
+      "tone": "Optimistic and confident tone with management pleased by achieving profitable growth across all segments while acknowledging ongoing work needed to reach full potential.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2026/02/12/oatly-otly-q3-2024-earnings-call-transcript/"
+    },
+    {
+      "quarter": "Q2 2024",
+      "date": "2024-07-18",
+      "speakers": [
+        "Spencer Wang (VP of Finance, Investor Relations, and Corporate Development)",
+        "Theodore A. Sarandos (Co-Chief Executive Officer)",
+        "Gregory K. Peters (Co-Chief Executive Officer)",
+        "Spence Neumann (Chief Financial Officer)"
+      ],
+      "financials": {
+        "revenue_bn": null,
+        "revenue_yoy_pct": 17,
+        "eps_reported": null,
+        "eps_estimate": null
+      },
+      "key_quotes": [
+        {
+          "speaker": "Spence Neumann",
+          "theme": "Q2 Performance",
+          "text": "we're pleased with our performance in Q2. There were strong performance across the board, good momentum across the business, strong revenue growth, member growth, and profit growth."
+        },
+        {
+          "speaker": "Spence Neumann",
+          "theme": "Member Growth Drivers",
+          "text": "the kind of outside -- outsized paid net ads in the quarter was primarily driven by a stronger acquisition, a little stronger than we expected, but also very healthy, continued healthy retention in the quarter."
+        },
+        {
+          "speaker": "Spence Neumann",
+          "theme": "Margin Expansion",
+          "text": "when we think about margin expansion, we're obviously pleased with how it's trending so far. Our focus is to sustain healthy revenue growth and grow margins each year."
+        },
+        {
+          "speaker": "Spence Neumann",
+          "theme": "Full Year Guidance",
+          "text": "We're now targeting 26% full year operating income margin. That's up from our prior guide of 25%, and it's up 5 percentage points year over year."
+        },
+        {
+          "speaker": "Theodore A. Sarandos",
+          "theme": "India Growth",
+          "text": "We had this great show, 'Heeramandi.' Sanjay Leela Bhansali, SLB, is one of the most celebrated filmmakers in India, and he took on this incredibly ambitious series and brought it to the screen on Netflix, directed every episode, and it's our biggest drama series to date in India."
+        },
+        {
+          "speaker": "Gregory K. Peters",
+          "theme": "Paid Sharing",
+          "text": "we're at the point where we really operationalize paid sharing. So, it's just a standard part of our product experience."
+        }
+      ],
+      "key_themes": [
+        "17% reported revenue growth in Q2",
+        "5 percentage point margin improvement year-over-year",
+        "26% full year operating income margin target (up from 25%)",
+        "Approximately $6 billion full year free cash flow guidance",
+        "India as No. 2 and No. 3 country in paid net adds and revenue growth",
+        "Paid sharing now operationalized as standard product feature",
+        "Healthy organic growth and improved conversion of unpaid accounts"
+      ],
+      "risks": [
+        "Foreign exchange volatility impacting margin expansion",
+        "Timing uncertainty in content spend and taxes affecting free cash flow guidance"
+      ],
+      "tone": "Positive and confident, with management expressing satisfaction with Q2 performance across subscriber growth, revenue expansion, and margin improvement while highlighting continued opportunities in paid sharing and international markets like India.",
+      "source_url": "https://www.fool.com/earnings/call-transcripts/2024/07/18/netflix-nflx-q2-2024-earnings-call-transcript/"
+    }
+  ]
+}
